@@ -1,0 +1,52 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// Colors
+
+$body-bg:               #EDEDEE;
+$background:            #EDEDEE;
+$red:                   #B5222A;
+$navy:                  #000455;
+$cerulean:              #0BB4C9;
+$orange:                #F1A069;
+$black:                 #4A4A4A;
+$white:                 #FFFFFF;
+$transp-black:          rgba(0,0,0,0.10);
+$transp-black-2:          rgba(0,0,0,0.2);
+$transp-black-5:          rgba(0,0,0,0.5);
+$transp-black-7:          rgba(0,0,0,0.7);
+
+
+
+
+$brand-primary:         $navy;
+$brand-info:            $cerulean;
+$brand-warning:          $orange;
+
+
+// Spacing & Grid
+$enable-flex:           true;
+$xs:                    554px;
+$sm:                    768px;
+$md:                    992px;
+$lg:                    1200px;
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto|Roboto+Condensed:800+500+300|Roboto+Slab|Inconsolata');
+@import url('https://fast.fonts.net/cssapi/2e2de36b-673c-47a0-94fe-647aa81e7d3c.css');
+
+
+$playfair: 'Playfair Display';
+$roboto: 'Roboto', sans-serif;
+$roboto-cond: 'Roboto Condensed', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
+$utopia:      'Utopia W03 Sbd Cp';
+$incon:       'Inconsolata', monospace;
+
+$serif:       $utopia;
+$sans:        'Avenir';
+$condensed:   'Trade Gothic W01';

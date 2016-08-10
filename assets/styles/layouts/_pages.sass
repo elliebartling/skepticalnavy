@@ -1,0 +1,37 @@
+html
+  font-family: $sans
+
+body.home
+  background-color: $background
+
+.home main
+  font-family: $sans
+  .page-header
+    +headline-font
+
+.content
+  padding-top: 50px
+
+article.postify.has-thumbnail.featured-post
+  max-height: 700px
+  height: 700px
+  position: relative
+  display: block
+  .post-content
+    position: absolute
+    bottom: 20px
+
+
+.featured-post.has-thumbnail
+  +light-font
+
+.section-header
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: center
+  align-content: center
+
+section
+  margin-bottom: 60px

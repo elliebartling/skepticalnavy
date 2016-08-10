@@ -1,0 +1,94 @@
+.email-capture
+  width: 100%
+  text-align: center
+  background-color: $brand-primary
+  background: url('../images/email-bar.png')
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: 30% 70%
+  +breakpoint($md)
+    background-position: 40% center
+  +light-font
+
+.email-capture .widget
+  margin: auto
+  padding: 20px
+  +breakpoint($md)
+    padding: 40px
+
+  input[type="text"],input[type="email"]
+    border-color: transparent
+    color: $black
+
+  input[type="text"]
+    width: 100%
+    max-width: 600px
+    margin: auto
+
+section.content-wrap
+  padding-top: 40px
+  margin-bottom: 20px
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: space-between
+  align-items: flex-start
+
+  .entry-content
+    max-width: 650px
+  .sidebar
+    max-width: 300px
+    display: none
+    +breakpoint($md)
+      display: block
+    top: 80px
+    bottom: 0px
+    background: transparent
+    padding: 20px
+    margin-left: 20px
+    height: 100%
+    border-right: none
+    width: 300px !important
+    +special-font
+    border-left: 2px solid $background
+
+    h1,h2,h3,h4,h5
+      +subheadline-font
+      display: inline-block
+      margin-top: 20px
+      color: $transp-black-5
+      font-size: 30px
+      border-bottom: 20px solid lighten($brand-info, 10%)
+      line-height: 5px
+    .yarpp-thumbnails
+      display: block
+      position: relative
+      overflow: hidden
+    .yarpp-thumbnail-default
+      display: none
+    .yarpp-thumbnail
+      width: 100%
+      height: auto
+      display: block
+      position: relative
+
+    .yarpp-thumbnail-title
+      width: 100%
+      max-width: 100%
+      margin: 10px
+      display: inline-block
+    .attachment-yarpp-thumbnail
+      margin: 0px
+      border-top-right-radius: 2px
+      border-top-left-radius: 2px
+
+#footer-social a
+  margin-right: 5px
+
+
+//
+// aside.sidebar.affix-top
+//   top: 80px
+//
+// aside.sidebar.affix-bottom
+//   bottom: 0px

@@ -1,0 +1,187 @@
+/* ------------------
+/* Home Page Styles
+/* ----------------- */
+
+
+
+// Article Styles
+article.postify
+  overflow: hidden
+  background-color: $white
+  .post-content
+    position: relative
+    color: $cerulean
+    padding: 20px
+    margin: 20px
+    border-radius: 4px
+    max-width: 500px
+
+article.postify.has-thumbnail
+  .post-thumbnail
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    img
+      height: 100%
+      width: 100%
+      // -webkit-filter: brightness(50%)
+      -webkit-transform: scale(1.2, 1.2)
+      object-fit: cover
+    .overlay
+      background-color: #000000
+      opacity: .4
+      width: 100%
+      height: 100%
+      position: absolute
+      z-index: 2
+  .post-content
+    z-index: 3
+
+.post-grid article.postify
+  // img
+  //   filter: blur(20px)
+  //   -webkit-filter: blur(20px)
+  // &:hover
+  //   img
+  //     filter: blur(0px)
+  //     -webkit-filter: blur(0px)
+  //     transition: all .2s
+
+article.post-type-threesixty .post-content .post-author
+  display: none
+
+/* ------------------
+/* Single Page Styles
+/* ----------------- */
+.single
+  background-color: $white
+  main
+    margin: auto
+    padding-top: 100px
+    h1.entry-title
+      +subheadline-font
+      font-size: 40px
+      +breakpoint($sm)
+        font-size: 60px
+    .alignright
+      float: right
+    .alignleft
+      float: left
+    img
+      margin: 1rem
+      max-width: 100%
+      width: 100% !important
+      height: auto !important
+      object-fit: contain
+    table
+      margin-top: 1.5rem
+      margin-bottom: 1.5rem
+      overflow-y: scroll
+  header
+    margin-bottom: 20px
+  article
+    max-width: 1100px
+    padding: 20px
+    padding-top: 40px
+    margin: auto
+
+  .entry-meta
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: flex-start
+    color: $transp-black-5
+
+    time
+      +special-font
+    .divider
+      font-size: 8px
+    .divider::after
+      content: "\f111"
+      font-family: "FontAwesome"
+      margin: auto
+      margin-right: 10px
+      margin-left: 10px
+      color: $transp-black
+      font-size: 8px
+      line-height: 8px
+    .author
+      color: $transp-black-5
+      +special-font
+      margin-bottom: 0px
+
+  .entry-social.ssk-left
+    bottom: 0
+    margin-bottom: 0px
+    +breakpoint(769px)
+      top: 100px
+      display: block
+      a.ssk.ssk-text
+        margin-bottom: 5px
+      .ssk.ssk-text::before
+        background-color: none !important
+  .entry-social.ssk-bottom
+    display: block
+    +breakpoint($sm)
+      display: none
+
+.single article .tags
+  +special-font
+  margin-bottom: 20px
+  a
+    display: inline-block
+    background-color: $brand-info
+    color: $white
+    padding: 5px 10px
+    &:hover
+      background-color: darken($brand-info, 10%)
+
+
+.single article .entry-content p:first-of-type
+  font-size: 20px
+
+.single article
+  .background
+    width: 100%
+    margin-top: -80px
+    max-height: 400px
+    overflow: hidden
+    top: 0
+    left: 0
+    // margin-bottom: 20px
+    img
+      margin: 0px
+      object-fit: cover
+
+.ssk-sticky
+  z-index: 300 !important
+
+#author-box
+  background: $background
+  padding: 40px
+  margin-bottom: 0px
+  .author-photo
+    max-width: 200px
+    max-height: 200px
+    width: 200px
+    height: 200px
+    margin: auto
+    overflow: hidden
+    border-radius: 300px
+    img
+      object-fit: cover
+      margin: 0px
+      width: 100% !important
+      height: 100% !important
+      // border-radius: 300px
+  .author-info
+    text-align: center
+    margin-top: 20px
+    margin-bottom: 20px
+  .btn
+    width: 100%
+    max-width: 500px
+    display: block
+    margin: auto

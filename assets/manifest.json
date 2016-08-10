@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/main.js",
+        "scripts/menu.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "single.js": {
+      "bower": ["social-share-kit", "Stickyfill"],
+      "files": ["scripts/single.js"]
+    },
+    "filtering.js": {
+      "bower": ["isotope", "imagesloaded"],
+      "files": ["scripts/filtering-init.js"]
+    }
+  },
+  "config": {
+    "devUrl": "http://skepticallibertarian.dev"
+  }
+}

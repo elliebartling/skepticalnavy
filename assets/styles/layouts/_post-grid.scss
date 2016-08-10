@@ -1,0 +1,84 @@
+main { width: 100% }
+
+
+#post-grid {
+  width: 100%;
+  padding-top: 20px;
+
+  .gutter-sizer {
+    display: block;
+    width: 0px;
+  }
+
+  .grid-sizer, article {
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 4px 4px 0px $transp-black;
+  }
+
+  article.has-thumbnail {
+    @include light-font;
+    .post-thumbnail {
+      overflow: hidden;
+      // height: 300px;
+      img {
+        // object-fit: contain;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+#post-grid.half {
+  margin-right: -3%;
+
+  .grid-sizer, article {
+    @include breakpoint($sm) {
+      width: 48.5%;
+    }
+  }
+
+  .gutter-sizer {
+    display: block;
+    width: 0px;
+    @include breakpoint($sm) {
+      width: 3%;
+      }
+    }
+}
+
+#post-grid.thirds {
+  margin-right: -3%;
+  .grid-sizer {
+    @include breakpoint($sm) {
+      width: 48.5%;
+    }
+    @include breakpoint($lg) {
+      width: 32%;
+    }
+  }
+
+  .gutter-sizer {
+    display: block;
+    width: 0px;
+    @include breakpoint($sm) {
+      width: 3%;
+    }
+    @include breakpoint($lg) {
+      width: 2%;
+    }
+  }
+
+  article {
+    @include breakpoint($sm) {
+      width: 48.5%;
+    }
+    @include breakpoint($lg) {
+      width: 32%;
+    }
+  }
+}
