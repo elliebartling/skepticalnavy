@@ -1,7 +1,7 @@
 main { width: 100% }
 
 
-#post-grid {
+.post-grid {
   width: 100%;
   padding-top: 20px;
 
@@ -33,7 +33,7 @@ main { width: 100% }
 
 
 
-#post-grid.half {
+.post-grid.half {
   margin-right: -3%;
 
   .grid-sizer, article {
@@ -51,7 +51,7 @@ main { width: 100% }
     }
 }
 
-#post-grid.thirds {
+.post-grid.thirds, .alm-reveal {
   margin-right: -3%;
   .grid-sizer {
     @include breakpoint($sm) {

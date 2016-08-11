@@ -25,7 +25,7 @@ use Roots\Sage\Wrapper;
       <?php if (Setup\display_sidebar()) : ?>
     </section>
         <?php get_template_part('templates/author-box'); ?>
-        <section class="email-capture">
+        <section class="dynamic-sidebar">
           <?php dynamic_sidebar('sidebar-email'); ?>
         </section>
       <?php endif; ?>

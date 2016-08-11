@@ -4,6 +4,7 @@ html
 body.home
   background-color: $background
 
+
 .home main
   font-family: $sans
   .page-header
@@ -25,6 +26,9 @@ article.postify.has-thumbnail.featured-post
 .featured-post.has-thumbnail
   +light-font
 
+section[class*="posts"]
+  margin-bottom: 60px
+
 .section-header
   display: flex
   flex-direction: row
@@ -33,5 +37,29 @@ article.postify.has-thumbnail.featured-post
   align-items: center
   align-content: center
 
-section
-  margin-bottom: 60px
+.three-sixty-posts
+  margin-top: 60px
+
+body.page:not(.home)
+  background: $white
+  .content
+    min-height: 650px
+    padding-top: 90px
+  .page-header
+    opacity: .15
+    margin-bottom: 20px
+  .main
+    max-width: 700px
+    padding: 20px
+    margin: auto
+
+  .entry-meta
+    +special-font
+
+
+body.archive section.content
+  padding: 2rem
+  padding-top: 7rem
+
+body.archive.author #author-box a.btn
+  display: none

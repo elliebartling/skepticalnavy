@@ -6,12 +6,8 @@
     <?php echo do_shortcode('[tsl_recent_posts type="post" get="8" size="half"]'); ?>
   </div>
 </section>
-<section class="email-capture">
-  <div class="container">
-    <div class="row">
+<section class="dynamic-sidebar">
       <?php dynamic_sidebar('sidebar-email'); ?>
-    </div>
-  </div>
 </section>
 <section class="three-sixty-posts wrap container">
   <div class="wrap container" role="document">
@@ -20,4 +16,7 @@
   <div class="posts">
     <?php echo do_shortcode('[tsl_recent_posts type="threesixty" get="12" size="thirds"]'); ?>
   </div>
+</section>
+<section class="dynamic-sidebar">
+      <?php dynamic_sidebar('sidebar-donate'); ?>
 </section>

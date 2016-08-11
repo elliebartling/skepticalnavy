@@ -86,31 +86,7 @@ article.post-type-threesixty .post-content .post-author
     padding-top: 40px
     margin: auto
 
-  .entry-meta
-    display: flex
-    flex-direction: row
-    flex-wrap: nowrap
-    align-items: center
-    justify-content: flex-start
-    color: $transp-black-5
 
-    time
-      +special-font
-    .divider
-      font-size: 8px
-    .divider::after
-      content: "\f111"
-      font-family: "FontAwesome"
-      margin: auto
-      margin-right: 10px
-      margin-left: 10px
-      color: $transp-black
-      font-size: 8px
-      line-height: 8px
-    .author
-      color: $transp-black-5
-      +special-font
-      margin-bottom: 0px
 
   .entry-social.ssk-left
     bottom: 0
@@ -185,3 +161,45 @@ article.post-type-threesixty .post-content .post-author
     max-width: 500px
     display: block
     margin: auto
+
+article blockquote
+  width: 100%
+  border-top: 2px solid $transp-black
+  border-bottom: 2px solid $transp-black
+  padding: 1.5rem
+  position: relative
+  p:last-of-type
+    margin-bottom: 0px
+  p
+    display: inline
+    opacity: .8
+    background-color: lighten($brand-info, 50%)
+  p:hover
+    opacity: 1
+    background-color: lighten($brand-info, 20%)
+
+.entry-meta
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  align-items: center
+  justify-content: flex-start
+  color: $transp-black-5
+
+  time
+    +special-font
+  .divider
+    font-size: 8px
+  .divider::after
+    content: "\f111"
+    font-family: "FontAwesome"
+    margin: auto
+    margin-right: 10px
+    margin-left: 10px
+    color: $transp-black
+    font-size: 8px
+    line-height: 8px
+  .author
+    color: $transp-black-5
+    +special-font
+    margin-bottom: 0px

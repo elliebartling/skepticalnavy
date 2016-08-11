@@ -24,8 +24,8 @@ use Roots\Sage\Wrapper;
       </main><!-- /.main -->
       <?php if (Setup\display_sidebar()) : ?>
     </section>
-        <section class="email-capture">
-          <?php dynamic_sidebar('sidebar-email'); ?>
+        <section class="dynamic-sidebar">
+          <?php dynamic_sidebar('sidebar-donate'); ?>
         </section>
       <?php endif; ?>
 

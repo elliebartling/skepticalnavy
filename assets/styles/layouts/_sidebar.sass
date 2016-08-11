@@ -1,4 +1,4 @@
-.email-capture
+.dynamic-sidebar
   width: 100%
   text-align: center
   background-color: $brand-primary
@@ -10,7 +10,7 @@
     background-position: 40% center
   +light-font
 
-.email-capture .widget
+.dynamic-sidebar .widget
   margin: auto
   padding: 20px
   +breakpoint($md)
@@ -24,6 +24,19 @@
     width: 100%
     max-width: 600px
     margin: auto
+
+  #widget-title
+    display: flex
+    flex-wrap: nowrap
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    margin-bottom: 10px
+    i.fa
+      font-size: 28px
+      margin-right: 5px
+    h2
+      margin-bottom: 0px
 
 section.content-wrap
   padding-top: 40px
@@ -85,10 +98,40 @@ section.content-wrap
 #footer-social a
   margin-right: 5px
 
+#editors-box-wrapper
+  text-align: center
+  margin-bottom: 3rem
+  h1
+    margin-bottom: 2rem
+    margin-top: 3rem
+#editors-box
+  position: relative
+  order: 2
+  display: flex
+  flex-wrap: nowrap
+  flex-direction: row
+  justify-content: center
+  li
+    text-align: center
+    list-style-type: none
+    margin: 1rem
+    .editor-img
+      margin: auto
+      width: 200px
+      height: 200px
+      border-radius: 4px
+      overflow: hidden
+      margin-bottom: 1rem
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    .editor-university
+      +special-font
+      opacity: .5
+    h4
+      +subheadline-font
+      font-size: 1.8rem
 
-//
-// aside.sidebar.affix-top
-//   top: 80px
-//
-// aside.sidebar.affix-bottom
-//   bottom: 0px
+section.dynamic-sidebar, section.modals
+  margin-bottom: 0px

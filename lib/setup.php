@@ -89,6 +89,14 @@ function widgets_init() {
     'before_title'  => '<h3>',
     'after_title'   => '</h3>'
   ]);
+  register_sidebar([
+    'name'          => __('Donate Bar', 'skeptical'),
+    'id'            => 'sidebar-donate',
+    'before_widget' => '<div class="widget %1$s %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3>',
+    'after_title'   => '</h3>'
+  ]);
 }
 add_action('widgets_init', __NAMESPACE__ . '\\widgets_init');
 
@@ -125,7 +133,7 @@ function assets() {
     wp_enqueue_script('single', Assets\asset_path('scripts/single.js'), [jquery], null, true);
   }
 
-  if (is_front_page()) {
+  if (is_front_page() || is_archive() ) {
     wp_enqueue_script('filtering', Assets\asset_path('scripts/filtering.js'), [jquery], null, true);
   }
 

@@ -16,6 +16,7 @@
           <?php get_template_part('templates/entry-tags'); ?>
           <h1 class="entry-title"><?php the_title(); ?></h1>
           <?php get_template_part('templates/entry-meta'); ?>
+          <?php get_template_part('templates/entry-social'); ?>
         </header>
         <?php the_content(); ?>
       </div>
