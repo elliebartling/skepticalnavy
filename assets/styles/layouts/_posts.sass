@@ -83,6 +83,8 @@ article.post-type-threesixty .post-content .post-author
   article
     max-width: 1100px
     padding: 20px
+    +breakpoint($sm)
+      padding: 50px
     padding-top: 40px
     margin: auto
 
@@ -115,8 +117,11 @@ article.post-type-threesixty .post-content .post-author
       background-color: darken($brand-info, 10%)
 
 
-.single article .entry-content p:first-of-type
-  font-size: 20px
+// .single article .entry-content
+//   p:first-of-type
+//     font-size: 20px
+//   p:first-of-type:first-letter
+//     font-size: 35px
 
 .single article
   .background
@@ -162,21 +167,43 @@ article.post-type-threesixty .post-content .post-author
     display: block
     margin: auto
 
-article blockquote
+article blockquote.twitter-me
   width: 100%
   border-top: 2px solid $transp-black
   border-bottom: 2px solid $transp-black
   padding: 1.5rem
   position: relative
-  p:last-of-type
+  background: transparent
+  border-left: none
+  a::before
+    font-family: "social-share-kit" !important
+    font-size: 22px
+    vertical-align: middle
+
+  a p:last-of-type
     margin-bottom: 0px
-  p
+  a.ssk-twitter
+    display: inline
+    background-color: transparent
+  a, a p
     display: inline
     opacity: .8
-    background-color: lighten($brand-info, 50%)
-  p:hover
-    opacity: 1
-    background-color: lighten($brand-info, 20%)
+    margin-bottom: 2px
+    font-size: 15px !important
+    padding: 6px
+  a:before
+    color: $transp-black-2
+  a.ssk-twitter:hover
+    background: $background
+
+article blockquote
+  background-color: $background
+  padding: 1rem
+  border-left: 7px solid $transp-black-2
+  p
+    font-size: 16px !important
+  p:last-of-type
+    margin-bottom: 0px
 
 .entry-meta
   display: flex

@@ -2,5 +2,4 @@
   <a href="" class="ssk ssk-facebook"></a>
   <a href="" class="ssk ssk-twitter"></a>
   <a href="" class="ssk ssk-reddit"></a>
-  <a href="" class="ssk ssk-wet-asphalt"><span class="fa fa-paper-plane"></span></a>
 </div>

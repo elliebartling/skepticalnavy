@@ -49,7 +49,8 @@ section.content-wrap
 
   .entry-content
     max-width: 650px
-  .sidebar
+
+body.single .sidebar-posts
     max-width: 300px
     display: none
     +breakpoint($md)
@@ -69,9 +70,9 @@ section.content-wrap
       +subheadline-font
       display: inline-block
       margin-top: 20px
-      color: $transp-black-5
+      color: $transp-black-7
       font-size: 30px
-      border-bottom: 20px solid lighten($brand-info, 10%)
+      border-bottom: 20px solid lighten($brand-warning, 10%)
       line-height: 5px
     .yarpp-thumbnails
       display: block
@@ -80,23 +81,41 @@ section.content-wrap
     .yarpp-thumbnail-default
       display: none
     .yarpp-thumbnail
-      width: 100%
+      width: 100% !important
       height: auto
       display: block
       position: relative
 
     .yarpp-thumbnail-title
-      width: 100%
+      width: 90%
       max-width: 100%
-      margin: 10px
+      margin: 10px 10px 5px
       display: inline-block
+      +subheadline-font
+      font-size: 20px
+      line-height: 1
+      color: $transp-black-7
     .attachment-yarpp-thumbnail
       margin: 0px
       border-top-right-radius: 2px
       border-top-left-radius: 2px
 
+body.single .sidebar-posts.bottom
+  display: block
+  border-left: none
+  padding-left: 0px
+  margin-left: 0px
+  margin-top: 2rem
+  width: 100% !important
+  max-width: 100%
+  .yarpp-thumbnails-horizontal
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+
 #footer-social a
   margin-right: 5px
+
 
 #editors-box-wrapper
   text-align: center

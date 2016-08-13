@@ -137,7 +137,7 @@ function assets() {
     wp_enqueue_script('filtering', Assets\asset_path('scripts/filtering.js'), [jquery], null, true);
   }
 
-  if (is_archive() || is_home() ) {
+  if (is_archive() || is_home() || is_search()) {
     wp_enqueue_script('ajax-filter', Assets\asset_path('scripts/ajax-filter.js'), [jquery], null, true);
   }
 

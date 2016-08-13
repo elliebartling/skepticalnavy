@@ -21,16 +21,19 @@
         <?php the_content(); ?>
       </div>
 
-      <aside class="sidebar sticky">
+      <aside class="sidebar-posts sticky">
         <?php dynamic_sidebar('sidebar-primary'); ?>
       </aside><!-- /.sidebar -->
+
 
     </section>
     <div id="footer-social" class="entry-social ssk-group ssk-text" data-url="<?= get_the_permalink(); ?>">
       <a href="" class="ssk ssk-text ssk-facebook">Facebook</a>
       <a href="" class="ssk ssk-text ssk-twitter">Twitter</a>
       <a href="" class="ssk ssk-text ssk-reddit">Reddit</a>
-      <a href="" class="ssk ssk-text ssk-wet-asphalt"><span class="fa fa-paper-plane"></span>Email</a>
     </div>
+    <aside class="sidebar-posts bottom">
+      <?php dynamic_sidebar('sidebar-primary'); ?>
+    </aside><!-- /.sidebar -->
   </article>
 <?php endwhile; ?>

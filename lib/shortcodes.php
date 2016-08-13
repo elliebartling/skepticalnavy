@@ -51,7 +51,7 @@ add_shortcode('tsl_email_capture', 'email_bar');
    $content = '<div class="section-header">';
    $content .= '<div class="col"><h1>' . $atts["header"] . "</h1>";
    $content .= '<p>' . $atts["subtitle"] . '</p></div>';
-   $content .= '<div class="col"><button class="btn btn-info" href="' . get_site_url() . $atts["button-target"] . '">' . $atts["button-text"] . '</button>';
+   $content .= '<div class="col"><a class="btn btn-info" href="' . $atts["button-target"] . '">' . $atts["button-text"] . '</a>';
    $content .= '</div></div>';
 
    return $content;

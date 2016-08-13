@@ -3,7 +3,9 @@ html
 
 body.home
   background-color: $background
-
+  main.main .wrap.container
+    +breakpoint($lg)
+      max-width: 1400px
 
 .home main
   font-family: $sans
@@ -57,7 +59,7 @@ body.page:not(.home)
     +special-font
 
 
-body.archive, body.blog
+body.archive, body.blog, body.search
   section.content
     padding: 2rem
     padding-top: 7rem
@@ -78,14 +80,15 @@ nav.posts-navigation #ajax-load-more
 
 .button-container
   display: flex
-  flex-direction: row
+  flex-direction: column
   flex-wrap: wrap
   justify-content: center
   margin-top: 2rem
   margin-bottom: 2rem
-  +breakpoint($xs)
-    flex-wrap: nowrap
-
+  // +breakpoint($xs)
+  //   flex-wrap: nowrap
+  br
+    display: none
   a.btn
     width: 100%
     +breakpoint($xs)
@@ -93,11 +96,19 @@ nav.posts-navigation #ajax-load-more
     // margin-bottom: .5rem
     margin-right: .5rem
     margin-left: .5rem
+    margin: auto
+    margin-bottom: .5rem
     i.fa
       margin-left: .5rem
 
 body.page.contact #footer-social
   display: flex
+  flex-wrap: wrap
   justify-content: center
   br
     display: none
+
+body.page.page-template-default
+  h1
+    margin-bottom: 2rem
+    margin-top: 2rem

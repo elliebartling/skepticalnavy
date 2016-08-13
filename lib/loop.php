@@ -90,6 +90,7 @@ function postify_it($args, $options) {
     }
     else {
       $content .= "</section>";
+
     }
 
     // Reset the query
@@ -99,7 +100,6 @@ function postify_it($args, $options) {
   else {
     $content = "No posts found.";
   }
-
   return $content;
 }
 
