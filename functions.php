@@ -33,8 +33,8 @@ function create_post_type() {
   register_post_type( 'threesixty',
     array(
       'labels' => array(
-        'name' => __( 'ThreeSixty' ),
-        'singular_name' => __( 'Three Sixty' )
+        'name' => __( '360 Posts' ),
+        'singular_name' => __( '360 Post' )
       ),
       'show_ui' => true,
       'show_in_nav_menus' => true,

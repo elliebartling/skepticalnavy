@@ -4,6 +4,7 @@ main { width: 100% }
 .post-grid {
   width: 100%;
   padding-top: 20px;
+  position: relative;
 
   .gutter-sizer {
     display: block;
@@ -11,7 +12,8 @@ main { width: 100% }
   }
 
   .grid-sizer, article {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     width: 100%;
     border-radius: 4px;
     box-shadow: 4px 4px 0px $transp-black;

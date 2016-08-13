@@ -25,6 +25,10 @@
       "bower": ["social-share-kit", "Stickyfill"],
       "files": ["scripts/single.js"]
     },
+    "ajax-filter.js": {
+      "bower": ["isotope", "imagesloaded"],
+      "files": ["scripts/ajax-layout.js"]
+    },
     "filtering.js": {
       "bower": ["isotope", "imagesloaded"],
       "files": ["scripts/filtering-init.js"]

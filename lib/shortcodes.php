@@ -23,6 +23,19 @@ function recent_posts_grid($atts) {
 
 add_shortcode( 'tsl_recent_posts' , 'recent_posts_grid' );
 
+function create_support_button($atts) {
+  $content = "<a class='btn btn-" . $atts['color'] . "'";
+  $content .= "href='" . $atts['href'] . "' target='_blank'>";
+  $content .= $atts['text'];
+  if($atts['type']) {
+    $content .= "<i class='fa fa-" . $atts['type'] . "'></i>";
+  }
+  $content .= "</a>";
+
+  return $content;
+}
+add_shortcode( 'support_button' , 'create_support_button' );
+
 function email_bar() {
   dynamic_sidebar('sidebar-email');
 }

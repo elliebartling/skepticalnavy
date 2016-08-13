@@ -133,8 +133,12 @@ function assets() {
     wp_enqueue_script('single', Assets\asset_path('scripts/single.js'), [jquery], null, true);
   }
 
-  if (is_front_page() || is_archive() ) {
+  if (is_front_page()) {
     wp_enqueue_script('filtering', Assets\asset_path('scripts/filtering.js'), [jquery], null, true);
+  }
+
+  if (is_archive() || is_home() ) {
+    wp_enqueue_script('ajax-filter', Assets\asset_path('scripts/ajax-filter.js'), [jquery], null, true);
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);

@@ -57,9 +57,47 @@ body.page:not(.home)
     +special-font
 
 
-body.archive section.content
-  padding: 2rem
-  padding-top: 7rem
+body.archive, body.blog
+  section.content
+    padding: 2rem
+    padding-top: 7rem
 
 body.archive.author #author-box a.btn
   display: none
+
+
+
+#ajax-load-more
+  position: absolute
+  bottom: -20px
+  width: 100%
+
+nav.posts-navigation #ajax-load-more
+  position: relative
+
+
+.button-container
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: center
+  margin-top: 2rem
+  margin-bottom: 2rem
+  +breakpoint($xs)
+    flex-wrap: nowrap
+
+  a.btn
+    width: 100%
+    +breakpoint($xs)
+      width: auto
+    // margin-bottom: .5rem
+    margin-right: .5rem
+    margin-left: .5rem
+    i.fa
+      margin-left: .5rem
+
+body.page.contact #footer-social
+  display: flex
+  justify-content: center
+  br
+    display: none

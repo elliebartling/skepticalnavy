@@ -6,7 +6,7 @@
     console.log("filtering-init loaded");
     $grids = $('.post-grid');
     $grids.each(function () {
-      return $(this).isotope({
+      $('.post-grid').isotope({
         itemSelector: '.post',
         percentPosition: true,
         masonry: {
@@ -14,6 +14,7 @@
           gutter: '.gutter-sizer'
         }
       });
+      return console.log('First isotope');
     });
     $grids.imagesLoaded(function () {
       $grids.each(function () {
@@ -25,10 +26,9 @@
             gutter: '.gutter-sizer'
           }
         });
-        return false;
+        return console.log('Second isotope');
       });
-      return false;
     });
-    return false;
+    $('.post-grid').isotope('layout');
   })(jQuery);
 }).call(undefined);
