@@ -59,7 +59,7 @@ body.page:not(.home)
     +special-font
 
 
-body.archive, body.blog, body.search
+body.archive, body.blog, body.search, body.tag, body.error404
   section.content
     padding: 2rem
     padding-top: 7rem
@@ -67,6 +67,21 @@ body.archive, body.blog, body.search
 body.archive.author #author-box a.btn
   display: none
 
+body.error404
+  text-align: center
+  .background
+    max-width: 700px
+    height: 500px
+    overflow: hidden
+    border-radius: 4px
+    margin: auto
+    margin-top: 2rem
+    margin-bottom: 2rem
+    img
+      object-fit: cover
+      max-width: 100%
+      position: relative
+      top: -100px
 
 
 #ajax-load-more
@@ -108,7 +123,7 @@ body.page.contact #footer-social
   br
     display: none
 
-body.page.page-template-default
+body.page.page-template-default:not(.home)
   h1
     margin-bottom: 2rem
     margin-top: 2rem
