@@ -18839,11 +18839,6 @@ body.single #footer-social {
       width: 100%;
       height: 100%;
       object-fit: cover; }
-    #editors-box li .editor-university {
-      font-family: "Inconsolata", monospace;
-      text-transform: uppercase;
-      font-weight: bold;
-      opacity: .5; }
     #editors-box li h4 {
       font-family: "Trade Gothic W01";
       font-weight: bold;
@@ -18851,6 +18846,12 @@ body.single #footer-social {
       font-size: 36px;
       font-style: normal;
       font-size: 1.8rem; }
+
+.editor-university {
+  font-family: "Inconsolata", monospace;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: .5; }
 
 section.dynamic-sidebar, section.modals {
   margin-bottom: 0px; }

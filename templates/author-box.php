@@ -22,13 +22,18 @@
 
           <div class="author-info">
             <h1 class="autor-name"><?php echo $coauthor->display_name; ?></h1>
-            <p class="author-bio"><?php $coauthor->description ?></p>
+            <?php if( get_the_coauthor_meta('university', $authID) != '') {
+         			echo '<h5 class="editor-university">';
+         			the_author_meta('university', $coauthor->ID);
+         			echo '</h5>';
+         		} ?>
+            <p class="author-bio"><?php echo $coauthor->description; ?></p>
             <!-- <ul class="author-social">
               <li>
             </ul> -->
           </div>
 
-          <a href="<?php echo get_author_posts_url($coauthor->ID); ?>" class="btn btn-info btn-fullwidth">View all Posts by <?php $coauthor->display_name ?> </a>
+          <a href="<?php echo get_author_posts_url($coauthor->ID); ?>" class="btn btn-info btn-fullwidth">View all Posts by <?php echo $coauthor->display_name; ?> </a>
 
         </div>
       <?php }
