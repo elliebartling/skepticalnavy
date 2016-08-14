@@ -17,6 +17,7 @@
     padding: 40px
 
   input[type="text"],input[type="email"]
+    @extend .form-control
     border-color: transparent
     color: $black
 
@@ -24,6 +25,11 @@
     width: 100%
     max-width: 600px
     margin: auto
+
+  input[type="submit"]
+    @extend .btn
+    @extend .btn-lg
+    @extend .btn-warning
 
   #widget-title
     display: flex
