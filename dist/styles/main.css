@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:800+500+300|Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400+500+700+900|Roboto+Condensed:800+500+300|Inconsolata");
 @import url("https://fast.fonts.net/cssapi/2e2de36b-673c-47a0-94fe-647aa81e7d3c.css");
 /*!
  * Hamburgers
@@ -8,7 +8,7 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
-@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:800+500+300|Inconsolata");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400+500+700+900|Roboto+Condensed:800+500+300|Inconsolata");
 @import url("https://fast.fonts.net/cssapi/2e2de36b-673c-47a0-94fe-647aa81e7d3c.css");
 @import url(../../bower_components/components-font-awesome/css/font-awesome.css);
 @import url(../../bower_components/social-share-kit/dist/css/social-share-kit.css);
@@ -18327,6 +18327,9 @@ a.text-danger:focus, a.text-danger:hover {
   content: '';
   display: table; }
 
+b, strong {
+  font-weight: 900; }
+
 .btn, .nav-links a, .comment-form input[type="submit"], .search-form .search-submit, .dynamic-sidebar .widget input[type="submit"] {
   border-radius: 2px; }
 
@@ -18350,7 +18353,7 @@ a.text-danger:focus, a.text-danger:hover {
 /* Base settings */
 body {
   font-size: 16px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", -apple-system-body, sans-serif; }
 
 /* Mixins */
 /* ------------------- */
@@ -18380,7 +18383,7 @@ h2, .dynamic-sidebar div[class*="subscription"] h3, .h2, .small-headline {
   font-style: normal; }
 
 p {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", -apple-system-body, sans-serif;
   font-weight: medium;
   text-decoration: none;
   color: #4A4A4A;
@@ -19114,6 +19117,8 @@ article.post-type-threesixty .post-content .post-author {
       margin-bottom: 1rem;
       max-width: 100%;
       object-fit: contain; }
+    .single main figure {
+      max-width: 100%; }
     .single main table {
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
