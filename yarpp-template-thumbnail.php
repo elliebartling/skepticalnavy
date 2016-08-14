@@ -9,7 +9,10 @@ Author: mitcho (Michael Yoshitaka Erlewine)
 <ol>
 	<?php while (have_posts()) : the_post(); ?>
 		<?php if (has_post_thumbnail()):?>
-		<li><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a></li>
+		<li><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail(); ?></a>
+		<div class="thumbnail-content"> <?php echo the_excerpt(); ?></div>
+		</li>
+
 		<?php endif; ?>
 	<?php endwhile; ?>
 </ol>
