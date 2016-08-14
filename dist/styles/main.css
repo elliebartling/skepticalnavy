@@ -18692,7 +18692,7 @@ div[class*="search"]::before {
   .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget input[type="email"] {
     border-color: transparent;
     color: #4A4A4A; }
-  .dynamic-sidebar .widget input[type="text"] {
+  .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget input[type="email"] {
     width: 100%;
     max-width: 600px;
     margin: auto; }
