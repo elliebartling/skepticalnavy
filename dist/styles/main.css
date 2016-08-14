@@ -19000,7 +19000,8 @@ article.postify.has-thumbnail .post-thumbnail {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
   article.postify.has-thumbnail .post-thumbnail img {
     height: 100%;
     width: 100%;
