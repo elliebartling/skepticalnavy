@@ -19165,7 +19165,9 @@ article.post-type-threesixty .post-content .post-author {
   #author-box .container {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
     @media (min-width: 768px) {
       #author-box .container {
         flex-wrap: nowrap; } }

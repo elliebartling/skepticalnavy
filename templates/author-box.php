@@ -33,7 +33,7 @@
             </ul> -->
           </div>
 
-          <a href="<?php echo get_author_posts_url($coauthor->ID); ?>" class="btn btn-info btn-fullwidth">View all Posts by <?php echo $coauthor->display_name; ?> </a>
+          <a href="<?php echo get_author_posts_url($coauthor->ID); ?>" class="btn btn-info btn-fullwidth">View all posts by <?php echo $coauthor->display_name; ?> </a>
 
         </div>
       <?php }
@@ -59,7 +59,7 @@
           </ul> -->
         </div>
 
-        <a href="<?= get_author_posts_url(get_the_author_id()) ?>" class="btn btn-info btn-fullwidth">View all Posts by <?php the_author() ?> </a>
+        <a href="<?= get_author_posts_url(get_the_author_id()) ?>" class="btn btn-info btn-fullwidth">View all posts by <?php the_author() ?> </a>
 
       </div>
     <?php } ?>
