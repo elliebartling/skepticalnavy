@@ -11,13 +11,14 @@
   +light-font
 
 .dynamic-sidebar div[class*="subscription"]
+  h3
+    @extend h2 
+
+.dynamic-sidebar .widget
   margin: auto
   padding: 20px
   +breakpoint($md)
     padding: 40px
-
-  h3
-    @extend h2
 
   input[type="text"],input[type="email"]
     @extend .form-control
