@@ -19,6 +19,10 @@
       margin-bottom: 1.5rem;
     }
 
+    .button-container a {
+      color: $white;
+    }
+
     @include breakpoint($sm) { padding: 40px; }
     @include breakpoint($md) { padding: 50px; }
   }
