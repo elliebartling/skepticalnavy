@@ -18761,6 +18761,9 @@ body.single .sidebar-posts {
     height: auto;
     display: block;
     position: relative; }
+    body.single .sidebar-posts .yarpp-thumbnail img {
+      width: 100%;
+      object-fit: cover; }
   body.single .sidebar-posts .yarpp-thumbnail-title {
     width: 90%;
     max-width: 100%;
@@ -19092,8 +19095,6 @@ article.post-type-threesixty .post-content .post-author {
     .single main img {
       margin: 1rem;
       max-width: 100%;
-      width: 100% !important;
-      height: auto !important;
       object-fit: contain; }
     .single main table {
       margin-top: 1.5rem;
