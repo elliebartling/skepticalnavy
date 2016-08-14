@@ -9016,19 +9016,20 @@ textarea {
     page-break-inside: avoid; }
   p,
   h2,
+  .dynamic-sidebar div[class*="subscription"] h3,
   h3 {
     orphans: 3;
     widows: 3; }
-  h2,
+  h2, .dynamic-sidebar div[class*="subscription"] h3,
   h3 {
     page-break-after: avoid; }
   .navbar {
     display: none; }
-  .btn > .caret, .nav-links a > .caret, .comment-form input[type="submit"] > .caret, .search-form .search-submit > .caret, .dynamic-sidebar .widget input[type="submit"] > .caret,
+  .btn > .caret, .nav-links a > .caret, .comment-form input[type="submit"] > .caret, .search-form .search-submit > .caret, .dynamic-sidebar div[class*="subscription"] input[type="submit"] > .caret,
   .dropup > .btn > .caret, .nav-links
   .dropup > a > .caret, .comment-form
   .dropup > input[type="submit"] > .caret, .search-form
-  .dropup > .search-submit > .caret, .dynamic-sidebar .widget
+  .dropup > .search-submit > .caret, .dynamic-sidebar div[class*="subscription"]
   .dropup > input[type="submit"] > .caret {
     border-top-color: #000 !important; }
   .tag {
@@ -9068,7 +9069,7 @@ body {
 [tabindex="-1"]:focus {
   outline: none !important; }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, .dynamic-sidebar div[class*="subscription"] h3, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: .5rem; }
 
@@ -9218,7 +9219,7 @@ output {
 [hidden] {
   display: none !important; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, .dynamic-sidebar div[class*="subscription"] h3, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-family: inherit;
@@ -9229,7 +9230,7 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
   font-size: 2.5rem; }
 
-h2, .h2 {
+h2, .dynamic-sidebar div[class*="subscription"] h3, .h2 {
   font-size: 2rem; }
 
 h3, .h3 {
@@ -10238,7 +10239,7 @@ pre {
 .form-control, .comment-form input[type="text"],
 .comment-form input[type="email"],
 .comment-form input[type="url"],
-.comment-form textarea, .search-form .search-field, .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget input[type="email"] {
+.comment-form textarea, .search-form .search-field, .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] input[type="email"] {
   display: block;
   width: 100%;
   padding: 0.5rem 0.75rem;
@@ -10253,13 +10254,13 @@ pre {
   .form-control::-ms-expand, .comment-form input[type="text"]::-ms-expand,
   .comment-form input[type="email"]::-ms-expand,
   .comment-form input[type="url"]::-ms-expand,
-  .comment-form textarea::-ms-expand, .search-form .search-field::-ms-expand, .dynamic-sidebar .widget input[type="text"]::-ms-expand, .dynamic-sidebar .widget input[type="email"]::-ms-expand {
+  .comment-form textarea::-ms-expand, .search-form .search-field::-ms-expand, .dynamic-sidebar div[class*="subscription"] input[type="text"]::-ms-expand, .dynamic-sidebar div[class*="subscription"] input[type="email"]::-ms-expand {
     background-color: transparent;
     border: 0; }
   .form-control:focus, .comment-form input[type="text"]:focus,
   .comment-form input[type="email"]:focus,
   .comment-form input[type="url"]:focus,
-  .comment-form textarea:focus, .search-form .search-field:focus, .dynamic-sidebar .widget input[type="text"]:focus, .dynamic-sidebar .widget input[type="email"]:focus {
+  .comment-form textarea:focus, .search-form .search-field:focus, .dynamic-sidebar div[class*="subscription"] input[type="text"]:focus, .dynamic-sidebar div[class*="subscription"] input[type="email"]:focus {
     color: #55595c;
     background-color: #fff;
     border-color: #66afe9;
@@ -10267,22 +10268,22 @@ pre {
   .form-control::placeholder, .comment-form input[type="text"]::placeholder,
   .comment-form input[type="email"]::placeholder,
   .comment-form input[type="url"]::placeholder,
-  .comment-form textarea::placeholder, .search-form .search-field::placeholder, .dynamic-sidebar .widget input[type="text"]::placeholder, .dynamic-sidebar .widget input[type="email"]::placeholder {
+  .comment-form textarea::placeholder, .search-form .search-field::placeholder, .dynamic-sidebar div[class*="subscription"] input[type="text"]::placeholder, .dynamic-sidebar div[class*="subscription"] input[type="email"]::placeholder {
     color: #999;
     opacity: 1; }
   .form-control:disabled, .comment-form input[type="text"]:disabled,
   .comment-form input[type="email"]:disabled,
   .comment-form input[type="url"]:disabled,
-  .comment-form textarea:disabled, .search-form .search-field:disabled, .dynamic-sidebar .widget input[type="text"]:disabled, .dynamic-sidebar .widget input[type="email"]:disabled, .form-control[readonly], .comment-form input[readonly][type="text"],
+  .comment-form textarea:disabled, .search-form .search-field:disabled, .dynamic-sidebar div[class*="subscription"] input[type="text"]:disabled, .dynamic-sidebar div[class*="subscription"] input[type="email"]:disabled, .form-control[readonly], .comment-form input[readonly][type="text"],
   .comment-form input[readonly][type="email"],
   .comment-form input[readonly][type="url"],
-  .comment-form textarea[readonly], .search-form [readonly].search-field, .dynamic-sidebar .widget input[readonly][type="text"], .dynamic-sidebar .widget input[readonly][type="email"] {
+  .comment-form textarea[readonly], .search-form [readonly].search-field, .dynamic-sidebar div[class*="subscription"] input[readonly][type="text"], .dynamic-sidebar div[class*="subscription"] input[readonly][type="email"] {
     background-color: #eceeef;
     opacity: 1; }
   .form-control:disabled, .comment-form input[type="text"]:disabled,
   .comment-form input[type="email"]:disabled,
   .comment-form input[type="url"]:disabled,
-  .comment-form textarea:disabled, .search-form .search-field:disabled, .dynamic-sidebar .widget input[type="text"]:disabled, .dynamic-sidebar .widget input[type="email"]:disabled {
+  .comment-form textarea:disabled, .search-form .search-field:disabled, .dynamic-sidebar div[class*="subscription"] input[type="text"]:disabled, .dynamic-sidebar div[class*="subscription"] input[type="email"]:disabled {
     cursor: not-allowed; }
 
 select.form-control:not([size]):not([multiple]), .search-form select.search-field:not([size]):not([multiple]) {
@@ -10325,21 +10326,21 @@ select.form-control:focus::-ms-value, .search-form select.search-field:focus::-m
   .form-control-static.form-control-sm, .input-group-sm > .form-control-static.form-control, .comment-form .input-group-sm > input.form-control-static[type="text"],
   .comment-form .input-group-sm > input.form-control-static[type="email"],
   .comment-form .input-group-sm > input.form-control-static[type="url"],
-  .comment-form .input-group-sm > textarea.form-control-static, .search-form .input-group-sm > .form-control-static.search-field, .dynamic-sidebar .widget .input-group-sm > input.form-control-static[type="text"], .dynamic-sidebar .widget .input-group-sm > input.form-control-static[type="email"],
+  .comment-form .input-group-sm > textarea.form-control-static, .search-form .input-group-sm > .form-control-static.search-field, .dynamic-sidebar div[class*="subscription"] .input-group-sm > input.form-control-static[type="text"], .dynamic-sidebar div[class*="subscription"] .input-group-sm > input.form-control-static[type="email"],
   .input-group-sm > .form-control-static.input-group-addon,
   .input-group-sm > .input-group-btn > .form-control-static.btn, .nav-links
   .input-group-sm > .input-group-btn > a.form-control-static, .comment-form
   .input-group-sm > .input-group-btn > input.form-control-static[type="submit"], .search-form
-  .input-group-sm > .input-group-btn > .form-control-static.search-submit, .dynamic-sidebar .widget
+  .input-group-sm > .input-group-btn > .form-control-static.search-submit, .dynamic-sidebar div[class*="subscription"]
   .input-group-sm > .input-group-btn > input.form-control-static[type="submit"], .form-control-static.form-control-lg, .input-group-lg > .form-control-static.form-control, .comment-form .input-group-lg > input.form-control-static[type="text"],
   .comment-form .input-group-lg > input.form-control-static[type="email"],
   .comment-form .input-group-lg > input.form-control-static[type="url"],
-  .comment-form .input-group-lg > textarea.form-control-static, .search-form .input-group-lg > .form-control-static.search-field, .dynamic-sidebar .widget .input-group-lg > input.form-control-static[type="text"], .dynamic-sidebar .widget .input-group-lg > input.form-control-static[type="email"],
+  .comment-form .input-group-lg > textarea.form-control-static, .search-form .input-group-lg > .form-control-static.search-field, .dynamic-sidebar div[class*="subscription"] .input-group-lg > input.form-control-static[type="text"], .dynamic-sidebar div[class*="subscription"] .input-group-lg > input.form-control-static[type="email"],
   .input-group-lg > .form-control-static.input-group-addon,
   .input-group-lg > .input-group-btn > .form-control-static.btn, .nav-links
   .input-group-lg > .input-group-btn > a.form-control-static, .comment-form
   .input-group-lg > .input-group-btn > input.form-control-static[type="submit"], .search-form
-  .input-group-lg > .input-group-btn > .form-control-static.search-submit, .dynamic-sidebar .widget
+  .input-group-lg > .input-group-btn > .form-control-static.search-submit, .dynamic-sidebar div[class*="subscription"]
   .input-group-lg > .input-group-btn > input.form-control-static[type="submit"] {
     padding-right: 0;
     padding-left: 0; }
@@ -10347,12 +10348,12 @@ select.form-control:focus::-ms-value, .search-form select.search-field:focus::-m
 .form-control-sm, .input-group-sm > .form-control, .comment-form .input-group-sm > input[type="text"],
 .comment-form .input-group-sm > input[type="email"],
 .comment-form .input-group-sm > input[type="url"],
-.comment-form .input-group-sm > textarea, .search-form .input-group-sm > .search-field, .dynamic-sidebar .widget .input-group-sm > input[type="text"], .dynamic-sidebar .widget .input-group-sm > input[type="email"],
+.comment-form .input-group-sm > textarea, .search-form .input-group-sm > .search-field, .dynamic-sidebar div[class*="subscription"] .input-group-sm > input[type="text"], .dynamic-sidebar div[class*="subscription"] .input-group-sm > input[type="email"],
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn, .nav-links
 .input-group-sm > .input-group-btn > a, .comment-form
 .input-group-sm > .input-group-btn > input[type="submit"], .search-form
-.input-group-sm > .input-group-btn > .search-submit, .dynamic-sidebar .widget
+.input-group-sm > .input-group-btn > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-sm > .input-group-btn > input[type="submit"] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
@@ -10367,12 +10368,12 @@ select.form-control-sm:not([size]):not([multiple]), .input-group-sm > select.for
 .form-control-lg, .input-group-lg > .form-control, .comment-form .input-group-lg > input[type="text"],
 .comment-form .input-group-lg > input[type="email"],
 .comment-form .input-group-lg > input[type="url"],
-.comment-form .input-group-lg > textarea, .search-form .input-group-lg > .search-field, .dynamic-sidebar .widget .input-group-lg > input[type="text"], .dynamic-sidebar .widget .input-group-lg > input[type="email"],
+.comment-form .input-group-lg > textarea, .search-form .input-group-lg > .search-field, .dynamic-sidebar div[class*="subscription"] .input-group-lg > input[type="text"], .dynamic-sidebar div[class*="subscription"] .input-group-lg > input[type="email"],
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn, .nav-links
 .input-group-lg > .input-group-btn > a, .comment-form
 .input-group-lg > .input-group-btn > input[type="submit"], .search-form
-.input-group-lg > .input-group-btn > .search-submit, .dynamic-sidebar .widget
+.input-group-lg > .input-group-btn > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-lg > .input-group-btn > input[type="submit"] {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
@@ -10455,7 +10456,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .comment-form input[type="url"],
 .comment-form .has-success input[type="url"], .has-success
 .comment-form textarea,
-.comment-form .has-success textarea, .has-success .search-form .search-field, .search-form .has-success .search-field, .has-success .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget .has-success input[type="text"], .has-success .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget .has-success input[type="email"] {
+.comment-form .has-success textarea, .has-success .search-form .search-field, .search-form .has-success .search-field, .has-success .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] .has-success input[type="text"], .has-success .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"] .has-success input[type="email"] {
   border-color: #5cb85c; }
 
 .has-success .input-group-addon {
@@ -10488,7 +10489,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .comment-form input[type="url"],
 .comment-form .has-warning input[type="url"], .has-warning
 .comment-form textarea,
-.comment-form .has-warning textarea, .has-warning .search-form .search-field, .search-form .has-warning .search-field, .has-warning .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget .has-warning input[type="text"], .has-warning .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget .has-warning input[type="email"] {
+.comment-form .has-warning textarea, .has-warning .search-form .search-field, .search-form .has-warning .search-field, .has-warning .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] .has-warning input[type="text"], .has-warning .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"] .has-warning input[type="email"] {
   border-color: #F1A069; }
 
 .has-warning .input-group-addon {
@@ -10521,7 +10522,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .comment-form input[type="url"],
 .comment-form .has-danger input[type="url"], .has-danger
 .comment-form textarea,
-.comment-form .has-danger textarea, .has-danger .search-form .search-field, .search-form .has-danger .search-field, .has-danger .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget .has-danger input[type="text"], .has-danger .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget .has-danger input[type="email"] {
+.comment-form .has-danger textarea, .has-danger .search-form .search-field, .search-form .has-danger .search-field, .has-danger .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] .has-danger input[type="text"], .has-danger .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"] .has-danger input[type="email"] {
   border-color: #d9534f; }
 
 .has-danger .input-group-addon {
@@ -10552,7 +10553,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .comment-form textarea,
   .comment-form .form-inline textarea, .search-form
   .comment-form textarea,
-  .comment-form .search-form textarea, .search-form .search-field, .form-inline .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget .form-inline input[type="text"], .search-form .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget .search-form input[type="text"], .form-inline .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget .form-inline input[type="email"], .search-form .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget .search-form input[type="email"] {
+  .comment-form .search-form textarea, .search-form .search-field, .form-inline .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] .form-inline input[type="text"], .search-form .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] .search-form input[type="text"], .form-inline .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"] .form-inline input[type="email"], .search-form .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"] .search-form input[type="email"] {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
@@ -10585,10 +10586,10 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
     .comment-form textarea,
     .comment-form .search-form .input-group textarea,
     .form-inline .input-group .search-form .search-field, .search-form .input-group .search-field,
-    .form-inline .input-group .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget
-    .form-inline .input-group input[type="text"], .search-form .input-group .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget .search-form .input-group input[type="text"],
-    .form-inline .input-group .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget
-    .form-inline .input-group input[type="email"], .search-form .input-group .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget .search-form .input-group input[type="email"] {
+    .form-inline .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"]
+    .form-inline .input-group input[type="text"], .search-form .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] .search-form .input-group input[type="text"],
+    .form-inline .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"]
+    .form-inline .input-group input[type="email"], .search-form .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"] .search-form .input-group input[type="email"] {
       width: auto; }
   .form-inline .input-group > .form-control, .search-form .input-group > .form-control, .form-inline .comment-form .input-group > input[type="text"], .comment-form .form-inline .input-group > input[type="text"], .search-form .comment-form .input-group > input[type="text"], .comment-form .search-form .input-group > input[type="text"], .form-inline
   .comment-form .input-group > input[type="email"],
@@ -10602,7 +10603,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .comment-form .input-group > textarea,
   .comment-form .form-inline .input-group > textarea, .search-form
   .comment-form .input-group > textarea,
-  .comment-form .search-form .input-group > textarea, .search-form .form-inline .input-group > .search-field, .search-form .input-group > .search-field, .form-inline .dynamic-sidebar .widget .input-group > input[type="text"], .dynamic-sidebar .widget .form-inline .input-group > input[type="text"], .search-form .dynamic-sidebar .widget .input-group > input[type="text"], .dynamic-sidebar .widget .search-form .input-group > input[type="text"], .form-inline .dynamic-sidebar .widget .input-group > input[type="email"], .dynamic-sidebar .widget .form-inline .input-group > input[type="email"], .search-form .dynamic-sidebar .widget .input-group > input[type="email"], .dynamic-sidebar .widget .search-form .input-group > input[type="email"] {
+  .comment-form .search-form .input-group > textarea, .search-form .form-inline .input-group > .search-field, .search-form .input-group > .search-field, .form-inline .dynamic-sidebar div[class*="subscription"] .input-group > input[type="text"], .dynamic-sidebar div[class*="subscription"] .form-inline .input-group > input[type="text"], .search-form .dynamic-sidebar div[class*="subscription"] .input-group > input[type="text"], .dynamic-sidebar div[class*="subscription"] .search-form .input-group > input[type="text"], .form-inline .dynamic-sidebar div[class*="subscription"] .input-group > input[type="email"], .dynamic-sidebar div[class*="subscription"] .form-inline .input-group > input[type="email"], .search-form .dynamic-sidebar div[class*="subscription"] .input-group > input[type="email"], .dynamic-sidebar div[class*="subscription"] .search-form .input-group > input[type="email"] {
     width: 100%; }
   .form-inline .form-control-label, .search-form .form-control-label {
     margin-bottom: 0;
@@ -10620,7 +10621,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   .form-inline .has-feedback .form-control-feedback, .search-form .has-feedback .form-control-feedback {
     top: 0; } }
 
-.btn, .nav-links a, .comment-form input[type="submit"], .search-form .search-submit, .dynamic-sidebar .widget input[type="submit"] {
+.btn, .nav-links a, .comment-form input[type="submit"], .search-form .search-submit, .dynamic-sidebar div[class*="subscription"] input[type="submit"] {
   display: inline-block;
   font-weight: normal;
   line-height: 1.25;
@@ -10633,17 +10634,17 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   padding: 0.5rem 1rem;
   font-size: 1rem;
   border-radius: 0.25rem; }
-  .btn:focus, .nav-links a:focus, .comment-form input[type="submit"]:focus, .search-form .search-submit:focus, .dynamic-sidebar .widget input[type="submit"]:focus, .btn.focus, .nav-links a.focus, .comment-form input.focus[type="submit"], .search-form .focus.search-submit, .dynamic-sidebar .widget input.focus[type="submit"], .btn:active:focus, .nav-links a:active:focus, .comment-form input[type="submit"]:active:focus, .search-form .search-submit:active:focus, .dynamic-sidebar .widget input[type="submit"]:active:focus, .btn:active.focus, .nav-links a:active.focus, .comment-form input[type="submit"]:active.focus, .search-form .search-submit:active.focus, .dynamic-sidebar .widget input[type="submit"]:active.focus, .btn.active:focus, .nav-links a.active:focus, .comment-form input.active[type="submit"]:focus, .search-form .active.search-submit:focus, .dynamic-sidebar .widget input.active[type="submit"]:focus, .btn.active.focus, .nav-links a.active.focus, .comment-form input.active.focus[type="submit"], .search-form .active.focus.search-submit, .dynamic-sidebar .widget input.active.focus[type="submit"] {
+  .btn:focus, .nav-links a:focus, .comment-form input[type="submit"]:focus, .search-form .search-submit:focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:focus, .btn.focus, .nav-links a.focus, .comment-form input.focus[type="submit"], .search-form .focus.search-submit, .dynamic-sidebar div[class*="subscription"] input.focus[type="submit"], .btn:active:focus, .nav-links a:active:focus, .comment-form input[type="submit"]:active:focus, .search-form .search-submit:active:focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:active:focus, .btn:active.focus, .nav-links a:active.focus, .comment-form input[type="submit"]:active.focus, .search-form .search-submit:active.focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:active.focus, .btn.active:focus, .nav-links a.active:focus, .comment-form input.active[type="submit"]:focus, .search-form .active.search-submit:focus, .dynamic-sidebar div[class*="subscription"] input.active[type="submit"]:focus, .btn.active.focus, .nav-links a.active.focus, .comment-form input.active.focus[type="submit"], .search-form .active.focus.search-submit, .dynamic-sidebar div[class*="subscription"] input.active.focus[type="submit"] {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
-  .btn:focus, .nav-links a:focus, .comment-form input[type="submit"]:focus, .search-form .search-submit:focus, .dynamic-sidebar .widget input[type="submit"]:focus, .btn:hover, .nav-links a:hover, .comment-form input[type="submit"]:hover, .search-form .search-submit:hover, .dynamic-sidebar .widget input[type="submit"]:hover {
+  .btn:focus, .nav-links a:focus, .comment-form input[type="submit"]:focus, .search-form .search-submit:focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:focus, .btn:hover, .nav-links a:hover, .comment-form input[type="submit"]:hover, .search-form .search-submit:hover, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:hover {
     text-decoration: none; }
-  .btn.focus, .nav-links a.focus, .comment-form input.focus[type="submit"], .search-form .focus.search-submit, .dynamic-sidebar .widget input.focus[type="submit"] {
+  .btn.focus, .nav-links a.focus, .comment-form input.focus[type="submit"], .search-form .focus.search-submit, .dynamic-sidebar div[class*="subscription"] input.focus[type="submit"] {
     text-decoration: none; }
-  .btn:active, .nav-links a:active, .comment-form input[type="submit"]:active, .search-form .search-submit:active, .dynamic-sidebar .widget input[type="submit"]:active, .btn.active, .nav-links a.active, .comment-form input.active[type="submit"], .search-form .active.search-submit, .dynamic-sidebar .widget input.active[type="submit"] {
+  .btn:active, .nav-links a:active, .comment-form input[type="submit"]:active, .search-form .search-submit:active, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:active, .btn.active, .nav-links a.active, .comment-form input.active[type="submit"], .search-form .active.search-submit, .dynamic-sidebar div[class*="subscription"] input.active[type="submit"] {
     background-image: none;
     outline: 0; }
-  .btn.disabled, .nav-links a.disabled, .comment-form input.disabled[type="submit"], .search-form .disabled.search-submit, .dynamic-sidebar .widget input.disabled[type="submit"], .btn:disabled, .nav-links a:disabled, .comment-form input[type="submit"]:disabled, .search-form .search-submit:disabled, .dynamic-sidebar .widget input[type="submit"]:disabled {
+  .btn.disabled, .nav-links a.disabled, .comment-form input.disabled[type="submit"], .search-form .disabled.search-submit, .dynamic-sidebar div[class*="subscription"] input.disabled[type="submit"], .btn:disabled, .nav-links a:disabled, .comment-form input[type="submit"]:disabled, .search-form .search-submit:disabled, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:disabled {
     cursor: not-allowed;
     opacity: .65; }
 
@@ -10791,39 +10792,39 @@ fieldset[disabled] a.search-submit {
     background-color: #5cb85c;
     border-color: #5cb85c; }
 
-.btn-warning, .dynamic-sidebar .widget input[type="submit"] {
+.btn-warning, .dynamic-sidebar div[class*="subscription"] input[type="submit"] {
   color: #fff;
   background-color: #F1A069;
   border-color: #F1A069; }
-  .btn-warning:hover, .dynamic-sidebar .widget input[type="submit"]:hover {
+  .btn-warning:hover, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:hover {
     color: #fff;
     background-color: #ed823a;
     border-color: #ec7d31; }
-  .btn-warning:focus, .dynamic-sidebar .widget input[type="submit"]:focus, .btn-warning.focus, .dynamic-sidebar .widget input.focus[type="submit"] {
+  .btn-warning:focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:focus, .btn-warning.focus, .dynamic-sidebar div[class*="subscription"] input.focus[type="submit"] {
     color: #fff;
     background-color: #ed823a;
     border-color: #ec7d31; }
-  .btn-warning:active, .dynamic-sidebar .widget input[type="submit"]:active, .btn-warning.active, .dynamic-sidebar .widget input.active[type="submit"],
-  .open > .btn-warning.dropdown-toggle, .dynamic-sidebar .widget
+  .btn-warning:active, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:active, .btn-warning.active, .dynamic-sidebar div[class*="subscription"] input.active[type="submit"],
+  .open > .btn-warning.dropdown-toggle, .dynamic-sidebar div[class*="subscription"]
   .open > input.dropdown-toggle[type="submit"] {
     color: #fff;
     background-color: #ed823a;
     border-color: #ec7d31;
     background-image: none; }
-    .btn-warning:active:hover, .dynamic-sidebar .widget input[type="submit"]:active:hover, .btn-warning:active:focus, .dynamic-sidebar .widget input[type="submit"]:active:focus, .btn-warning:active.focus, .dynamic-sidebar .widget input[type="submit"]:active.focus, .btn-warning.active:hover, .dynamic-sidebar .widget input.active[type="submit"]:hover, .btn-warning.active:focus, .dynamic-sidebar .widget input.active[type="submit"]:focus, .btn-warning.active.focus, .dynamic-sidebar .widget input.active.focus[type="submit"],
-    .open > .btn-warning.dropdown-toggle:hover, .dynamic-sidebar .widget
+    .btn-warning:active:hover, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:active:hover, .btn-warning:active:focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:active:focus, .btn-warning:active.focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:active.focus, .btn-warning.active:hover, .dynamic-sidebar div[class*="subscription"] input.active[type="submit"]:hover, .btn-warning.active:focus, .dynamic-sidebar div[class*="subscription"] input.active[type="submit"]:focus, .btn-warning.active.focus, .dynamic-sidebar div[class*="subscription"] input.active.focus[type="submit"],
+    .open > .btn-warning.dropdown-toggle:hover, .dynamic-sidebar div[class*="subscription"]
     .open > input.dropdown-toggle[type="submit"]:hover,
-    .open > .btn-warning.dropdown-toggle:focus, .dynamic-sidebar .widget
+    .open > .btn-warning.dropdown-toggle:focus, .dynamic-sidebar div[class*="subscription"]
     .open > input.dropdown-toggle[type="submit"]:focus,
-    .open > .btn-warning.dropdown-toggle.focus, .dynamic-sidebar .widget
+    .open > .btn-warning.dropdown-toggle.focus, .dynamic-sidebar div[class*="subscription"]
     .open > input.dropdown-toggle.focus[type="submit"] {
       color: #fff;
       background-color: #ea6e1a;
       border-color: #c85c13; }
-  .btn-warning.disabled:focus, .dynamic-sidebar .widget input.disabled[type="submit"]:focus, .btn-warning.disabled.focus, .dynamic-sidebar .widget input.disabled.focus[type="submit"], .btn-warning:disabled:focus, .dynamic-sidebar .widget input[type="submit"]:disabled:focus, .btn-warning:disabled.focus, .dynamic-sidebar .widget input[type="submit"]:disabled.focus {
+  .btn-warning.disabled:focus, .dynamic-sidebar div[class*="subscription"] input.disabled[type="submit"]:focus, .btn-warning.disabled.focus, .dynamic-sidebar div[class*="subscription"] input.disabled.focus[type="submit"], .btn-warning:disabled:focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:disabled:focus, .btn-warning:disabled.focus, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:disabled.focus {
     background-color: #F1A069;
     border-color: #F1A069; }
-  .btn-warning.disabled:hover, .dynamic-sidebar .widget input.disabled[type="submit"]:hover, .btn-warning:disabled:hover, .dynamic-sidebar .widget input[type="submit"]:disabled:hover {
+  .btn-warning.disabled:hover, .dynamic-sidebar div[class*="subscription"] input.disabled[type="submit"]:hover, .btn-warning:disabled:hover, .dynamic-sidebar div[class*="subscription"] input[type="submit"]:disabled:hover {
     background-color: #F1A069;
     border-color: #F1A069; }
 
@@ -11057,12 +11058,12 @@ fieldset[disabled] a.search-submit {
     color: #818a91;
     text-decoration: none; }
 
-.btn-lg, .btn-group-lg > .btn, .nav-links .btn-group-lg > a, .comment-form .btn-group-lg > input[type="submit"], .search-form .btn-group-lg > .search-submit, .nav-links a, .dynamic-sidebar .widget input[type="submit"] {
+.btn-lg, .btn-group-lg > .btn, .nav-links .btn-group-lg > a, .comment-form .btn-group-lg > input[type="submit"], .search-form .btn-group-lg > .search-submit, .nav-links a, .dynamic-sidebar div[class*="subscription"] input[type="submit"] {
   padding: 0.75rem 1.5rem;
   font-size: 1.25rem;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .nav-links .btn-group-sm > a, .comment-form .btn-group-sm > input[type="submit"], .search-form .btn-group-sm > .search-submit, .dynamic-sidebar .widget .btn-group-sm > input[type="submit"] {
+.btn-sm, .btn-group-sm > .btn, .nav-links .btn-group-sm > a, .comment-form .btn-group-sm > input[type="submit"], .search-form .btn-group-sm > .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group-sm > input[type="submit"] {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   border-radius: 0.2rem; }
@@ -11220,40 +11221,40 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-block;
   vertical-align: middle; }
-  .btn-group > .btn, .nav-links .btn-group > a, .comment-form .btn-group > input[type="submit"], .search-form .btn-group > .search-submit, .dynamic-sidebar .widget .btn-group > input[type="submit"],
+  .btn-group > .btn, .nav-links .btn-group > a, .comment-form .btn-group > input[type="submit"], .search-form .btn-group > .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"],
   .btn-group-vertical > .btn, .nav-links
   .btn-group-vertical > a, .comment-form
   .btn-group-vertical > input[type="submit"], .search-form
-  .btn-group-vertical > .search-submit, .dynamic-sidebar .widget
+  .btn-group-vertical > .search-submit, .dynamic-sidebar div[class*="subscription"]
   .btn-group-vertical > input[type="submit"] {
     position: relative;
     float: left; }
-    .btn-group > .btn:focus, .nav-links .btn-group > a:focus, .comment-form .btn-group > input[type="submit"]:focus, .search-form .btn-group > .search-submit:focus, .dynamic-sidebar .widget .btn-group > input[type="submit"]:focus, .btn-group > .btn:active, .nav-links .btn-group > a:active, .comment-form .btn-group > input[type="submit"]:active, .search-form .btn-group > .search-submit:active, .dynamic-sidebar .widget .btn-group > input[type="submit"]:active, .btn-group > .btn.active, .nav-links .btn-group > a.active, .comment-form .btn-group > input.active[type="submit"], .search-form .btn-group > .active.search-submit, .dynamic-sidebar .widget .btn-group > input.active[type="submit"],
+    .btn-group > .btn:focus, .nav-links .btn-group > a:focus, .comment-form .btn-group > input[type="submit"]:focus, .search-form .btn-group > .search-submit:focus, .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"]:focus, .btn-group > .btn:active, .nav-links .btn-group > a:active, .comment-form .btn-group > input[type="submit"]:active, .search-form .btn-group > .search-submit:active, .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"]:active, .btn-group > .btn.active, .nav-links .btn-group > a.active, .comment-form .btn-group > input.active[type="submit"], .search-form .btn-group > .active.search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group > input.active[type="submit"],
     .btn-group-vertical > .btn:focus, .nav-links
     .btn-group-vertical > a:focus, .comment-form
     .btn-group-vertical > input[type="submit"]:focus, .search-form
-    .btn-group-vertical > .search-submit:focus, .dynamic-sidebar .widget
+    .btn-group-vertical > .search-submit:focus, .dynamic-sidebar div[class*="subscription"]
     .btn-group-vertical > input[type="submit"]:focus,
     .btn-group-vertical > .btn:active, .nav-links
     .btn-group-vertical > a:active, .comment-form
     .btn-group-vertical > input[type="submit"]:active, .search-form
-    .btn-group-vertical > .search-submit:active, .dynamic-sidebar .widget
+    .btn-group-vertical > .search-submit:active, .dynamic-sidebar div[class*="subscription"]
     .btn-group-vertical > input[type="submit"]:active,
     .btn-group-vertical > .btn.active, .nav-links
     .btn-group-vertical > a.active, .comment-form
     .btn-group-vertical > input.active[type="submit"], .search-form
-    .btn-group-vertical > .active.search-submit, .dynamic-sidebar .widget
+    .btn-group-vertical > .active.search-submit, .dynamic-sidebar div[class*="subscription"]
     .btn-group-vertical > input.active[type="submit"] {
       z-index: 2; }
-    .btn-group > .btn:hover, .nav-links .btn-group > a:hover, .comment-form .btn-group > input[type="submit"]:hover, .search-form .btn-group > .search-submit:hover, .dynamic-sidebar .widget .btn-group > input[type="submit"]:hover,
+    .btn-group > .btn:hover, .nav-links .btn-group > a:hover, .comment-form .btn-group > input[type="submit"]:hover, .search-form .btn-group > .search-submit:hover, .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"]:hover,
     .btn-group-vertical > .btn:hover, .nav-links
     .btn-group-vertical > a:hover, .comment-form
     .btn-group-vertical > input[type="submit"]:hover, .search-form
-    .btn-group-vertical > .search-submit:hover, .dynamic-sidebar .widget
+    .btn-group-vertical > .search-submit:hover, .dynamic-sidebar div[class*="subscription"]
     .btn-group-vertical > input[type="submit"]:hover {
       z-index: 2; }
 
-.btn-group .btn + .btn, .btn-group .nav-links a + .btn, .nav-links .btn-group a + .btn, .btn-group .comment-form input[type="submit"] + .btn, .comment-form .btn-group input[type="submit"] + .btn, .btn-group .search-form .search-submit + .btn, .search-form .btn-group .search-submit + .btn, .btn-group .dynamic-sidebar .widget input[type="submit"] + .btn, .dynamic-sidebar .widget .btn-group input[type="submit"] + .btn, .btn-group .nav-links .btn + a, .nav-links .btn-group .btn + a, .btn-group .nav-links a + a, .nav-links .btn-group a + a, .btn-group .comment-form .nav-links input[type="submit"] + a, .nav-links .btn-group .comment-form input[type="submit"] + a, .comment-form .btn-group .nav-links input[type="submit"] + a, .nav-links .comment-form .btn-group input[type="submit"] + a, .btn-group .search-form .nav-links .search-submit + a, .nav-links .btn-group .search-form .search-submit + a, .search-form .btn-group .nav-links .search-submit + a, .nav-links .search-form .btn-group .search-submit + a, .btn-group .dynamic-sidebar .widget .nav-links input[type="submit"] + a, .nav-links .btn-group .dynamic-sidebar .widget input[type="submit"] + a, .dynamic-sidebar .widget .btn-group .nav-links input[type="submit"] + a, .nav-links .dynamic-sidebar .widget .btn-group input[type="submit"] + a, .btn-group .comment-form .btn + input[type="submit"], .comment-form .btn-group .btn + input[type="submit"], .btn-group .nav-links .comment-form a + input[type="submit"], .comment-form .btn-group .nav-links a + input[type="submit"], .nav-links .btn-group .comment-form a + input[type="submit"], .comment-form .nav-links .btn-group a + input[type="submit"], .btn-group .comment-form input[type="submit"] + input[type="submit"], .comment-form .btn-group input[type="submit"] + input[type="submit"], .btn-group .search-form .comment-form .search-submit + input[type="submit"], .comment-form .btn-group .search-form .search-submit + input[type="submit"], .search-form .btn-group .comment-form .search-submit + input[type="submit"], .comment-form .search-form .btn-group .search-submit + input[type="submit"], .btn-group .search-form .btn + .search-submit, .search-form .btn-group .btn + .search-submit, .btn-group .nav-links .search-form a + .search-submit, .search-form .btn-group .nav-links a + .search-submit, .nav-links .btn-group .search-form a + .search-submit, .search-form .nav-links .btn-group a + .search-submit, .btn-group .comment-form .search-form input[type="submit"] + .search-submit, .search-form .btn-group .comment-form input[type="submit"] + .search-submit, .comment-form .btn-group .search-form input[type="submit"] + .search-submit, .search-form .comment-form .btn-group input[type="submit"] + .search-submit, .btn-group .search-form .search-submit + .search-submit, .search-form .btn-group .search-submit + .search-submit, .btn-group .dynamic-sidebar .widget .search-form input[type="submit"] + .search-submit, .search-form .btn-group .dynamic-sidebar .widget input[type="submit"] + .search-submit, .dynamic-sidebar .widget .btn-group .search-form input[type="submit"] + .search-submit, .search-form .dynamic-sidebar .widget .btn-group input[type="submit"] + .search-submit, .btn-group .dynamic-sidebar .widget .btn + input[type="submit"], .dynamic-sidebar .widget .btn-group .btn + input[type="submit"], .btn-group .nav-links .dynamic-sidebar .widget a + input[type="submit"], .dynamic-sidebar .widget .btn-group .nav-links a + input[type="submit"], .nav-links .btn-group .dynamic-sidebar .widget a + input[type="submit"], .dynamic-sidebar .widget .nav-links .btn-group a + input[type="submit"], .btn-group .search-form .dynamic-sidebar .widget .search-submit + input[type="submit"], .dynamic-sidebar .widget .btn-group .search-form .search-submit + input[type="submit"], .search-form .btn-group .dynamic-sidebar .widget .search-submit + input[type="submit"], .dynamic-sidebar .widget .search-form .btn-group .search-submit + input[type="submit"], .btn-group .dynamic-sidebar .widget input[type="submit"] + input[type="submit"], .dynamic-sidebar .widget .btn-group input[type="submit"] + input[type="submit"],
+.btn-group .btn + .btn, .btn-group .nav-links a + .btn, .nav-links .btn-group a + .btn, .btn-group .comment-form input[type="submit"] + .btn, .comment-form .btn-group input[type="submit"] + .btn, .btn-group .search-form .search-submit + .btn, .search-form .btn-group .search-submit + .btn, .btn-group .dynamic-sidebar div[class*="subscription"] input[type="submit"] + .btn, .dynamic-sidebar div[class*="subscription"] .btn-group input[type="submit"] + .btn, .btn-group .nav-links .btn + a, .nav-links .btn-group .btn + a, .btn-group .nav-links a + a, .nav-links .btn-group a + a, .btn-group .comment-form .nav-links input[type="submit"] + a, .nav-links .btn-group .comment-form input[type="submit"] + a, .comment-form .btn-group .nav-links input[type="submit"] + a, .nav-links .comment-form .btn-group input[type="submit"] + a, .btn-group .search-form .nav-links .search-submit + a, .nav-links .btn-group .search-form .search-submit + a, .search-form .btn-group .nav-links .search-submit + a, .nav-links .search-form .btn-group .search-submit + a, .btn-group .dynamic-sidebar div[class*="subscription"] .nav-links input[type="submit"] + a, .nav-links .btn-group .dynamic-sidebar div[class*="subscription"] input[type="submit"] + a, .dynamic-sidebar div[class*="subscription"] .btn-group .nav-links input[type="submit"] + a, .nav-links .dynamic-sidebar div[class*="subscription"] .btn-group input[type="submit"] + a, .btn-group .comment-form .btn + input[type="submit"], .comment-form .btn-group .btn + input[type="submit"], .btn-group .nav-links .comment-form a + input[type="submit"], .comment-form .btn-group .nav-links a + input[type="submit"], .nav-links .btn-group .comment-form a + input[type="submit"], .comment-form .nav-links .btn-group a + input[type="submit"], .btn-group .comment-form input[type="submit"] + input[type="submit"], .comment-form .btn-group input[type="submit"] + input[type="submit"], .btn-group .search-form .comment-form .search-submit + input[type="submit"], .comment-form .btn-group .search-form .search-submit + input[type="submit"], .search-form .btn-group .comment-form .search-submit + input[type="submit"], .comment-form .search-form .btn-group .search-submit + input[type="submit"], .btn-group .search-form .btn + .search-submit, .search-form .btn-group .btn + .search-submit, .btn-group .nav-links .search-form a + .search-submit, .search-form .btn-group .nav-links a + .search-submit, .nav-links .btn-group .search-form a + .search-submit, .search-form .nav-links .btn-group a + .search-submit, .btn-group .comment-form .search-form input[type="submit"] + .search-submit, .search-form .btn-group .comment-form input[type="submit"] + .search-submit, .comment-form .btn-group .search-form input[type="submit"] + .search-submit, .search-form .comment-form .btn-group input[type="submit"] + .search-submit, .btn-group .search-form .search-submit + .search-submit, .search-form .btn-group .search-submit + .search-submit, .btn-group .dynamic-sidebar div[class*="subscription"] .search-form input[type="submit"] + .search-submit, .search-form .btn-group .dynamic-sidebar div[class*="subscription"] input[type="submit"] + .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group .search-form input[type="submit"] + .search-submit, .search-form .dynamic-sidebar div[class*="subscription"] .btn-group input[type="submit"] + .search-submit, .btn-group .dynamic-sidebar div[class*="subscription"] .btn + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .btn-group .btn + input[type="submit"], .btn-group .nav-links .dynamic-sidebar div[class*="subscription"] a + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .btn-group .nav-links a + input[type="submit"], .nav-links .btn-group .dynamic-sidebar div[class*="subscription"] a + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .nav-links .btn-group a + input[type="submit"], .btn-group .search-form .dynamic-sidebar div[class*="subscription"] .search-submit + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .btn-group .search-form .search-submit + input[type="submit"], .search-form .btn-group .dynamic-sidebar div[class*="subscription"] .search-submit + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .search-form .btn-group .search-submit + input[type="submit"], .btn-group .dynamic-sidebar div[class*="subscription"] input[type="submit"] + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .btn-group input[type="submit"] + input[type="submit"],
 .btn-group .btn + .btn-group,
 .btn-group .nav-links a + .btn-group, .nav-links
 .btn-group a + .btn-group,
@@ -11261,7 +11262,7 @@ input[type="button"].btn-block {
 .btn-group input[type="submit"] + .btn-group,
 .btn-group .search-form .search-submit + .btn-group, .search-form
 .btn-group .search-submit + .btn-group,
-.btn-group .dynamic-sidebar .widget input[type="submit"] + .btn-group, .dynamic-sidebar .widget
+.btn-group .dynamic-sidebar div[class*="subscription"] input[type="submit"] + .btn-group, .dynamic-sidebar div[class*="subscription"]
 .btn-group input[type="submit"] + .btn-group,
 .btn-group .btn-group + .btn,
 .btn-group .nav-links .btn-group + a, .nav-links
@@ -11270,7 +11271,7 @@ input[type="button"].btn-block {
 .btn-group .btn-group + input[type="submit"],
 .btn-group .search-form .btn-group + .search-submit, .search-form
 .btn-group .btn-group + .search-submit,
-.btn-group .dynamic-sidebar .widget .btn-group + input[type="submit"], .dynamic-sidebar .widget
+.btn-group .dynamic-sidebar div[class*="subscription"] .btn-group + input[type="submit"], .dynamic-sidebar div[class*="subscription"]
 .btn-group .btn-group + input[type="submit"],
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
@@ -11284,21 +11285,21 @@ input[type="button"].btn-block {
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
-  .btn-toolbar > .btn, .nav-links .btn-toolbar > a, .comment-form .btn-toolbar > input[type="submit"], .search-form .btn-toolbar > .search-submit, .dynamic-sidebar .widget .btn-toolbar > input[type="submit"],
+  .btn-toolbar > .btn, .nav-links .btn-toolbar > a, .comment-form .btn-toolbar > input[type="submit"], .search-form .btn-toolbar > .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-toolbar > input[type="submit"],
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 0.5rem; }
 
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .nav-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .search-form .btn-group > .search-submit:not(:first-child):not(:last-child):not(.dropdown-toggle), .dynamic-sidebar .widget .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .nav-links .btn-group > a:not(:first-child):not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle), .search-form .btn-group > .search-submit:not(:first-child):not(:last-child):not(.dropdown-toggle), .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"]:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
-.btn-group > .btn:first-child, .nav-links .btn-group > a:first-child, .comment-form .btn-group > input[type="submit"]:first-child, .search-form .btn-group > .search-submit:first-child, .dynamic-sidebar .widget .btn-group > input[type="submit"]:first-child {
+.btn-group > .btn:first-child, .nav-links .btn-group > a:first-child, .comment-form .btn-group > input[type="submit"]:first-child, .search-form .btn-group > .search-submit:first-child, .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"]:first-child {
   margin-left: 0; }
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .nav-links .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), .search-form .btn-group > .search-submit:first-child:not(:last-child):not(.dropdown-toggle), .dynamic-sidebar .widget .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .nav-links .btn-group > a:first-child:not(:last-child):not(.dropdown-toggle), .comment-form .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle), .search-form .btn-group > .search-submit:first-child:not(:last-child):not(.dropdown-toggle), .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"]:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group > .btn:last-child:not(:first-child), .nav-links .btn-group > a:last-child:not(:first-child), .comment-form .btn-group > input[type="submit"]:last-child:not(:first-child), .search-form .btn-group > .search-submit:last-child:not(:first-child), .dynamic-sidebar .widget .btn-group > input[type="submit"]:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .nav-links .btn-group > a:last-child:not(:first-child), .comment-form .btn-group > input[type="submit"]:last-child:not(:first-child), .search-form .btn-group > .search-submit:last-child:not(:first-child), .dynamic-sidebar div[class*="subscription"] .btn-group > input[type="submit"]:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -11306,15 +11307,15 @@ input[type="button"].btn-block {
 .btn-group > .btn-group {
   float: left; }
 
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .nav-links .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .comment-form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .search-form .btn-group > .btn-group:not(:first-child):not(:last-child) > .search-submit, .dynamic-sidebar .widget .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .nav-links .btn-group > .btn-group:not(:first-child):not(:last-child) > a, .comment-form .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .search-form .btn-group > .btn-group:not(:first-child):not(:last-child) > .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
   border-radius: 0; }
 
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .nav-links .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .comment-form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .search-form .btn-group > .btn-group:first-child:not(:last-child) > .search-submit:last-child, .dynamic-sidebar .widget .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .nav-links .btn-group > .btn-group:first-child:not(:last-child) > a:last-child, .comment-form .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .search-form .btn-group > .btn-group:first-child:not(:last-child) > .search-submit:last-child, .dynamic-sidebar div[class*="subscription"] .btn-group > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .nav-links .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .comment-form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .search-form .btn-group > .btn-group:last-child:not(:first-child) > .search-submit:first-child, .dynamic-sidebar .widget .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .nav-links .btn-group > .btn-group:last-child:not(:first-child) > a:first-child, .comment-form .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .search-form .btn-group > .btn-group:last-child:not(:first-child) > .search-submit:first-child, .dynamic-sidebar div[class*="subscription"] .btn-group > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -11322,36 +11323,36 @@ input[type="button"].btn-block {
 .btn-group.open .dropdown-toggle {
   outline: 0; }
 
-.btn + .dropdown-toggle-split, .nav-links a + .dropdown-toggle-split, .comment-form input[type="submit"] + .dropdown-toggle-split, .search-form .search-submit + .dropdown-toggle-split, .dynamic-sidebar .widget input[type="submit"] + .dropdown-toggle-split {
+.btn + .dropdown-toggle-split, .nav-links a + .dropdown-toggle-split, .comment-form input[type="submit"] + .dropdown-toggle-split, .search-form .search-submit + .dropdown-toggle-split, .dynamic-sidebar div[class*="subscription"] input[type="submit"] + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
-  .btn + .dropdown-toggle-split::after, .nav-links a + .dropdown-toggle-split::after, .comment-form input[type="submit"] + .dropdown-toggle-split::after, .search-form .search-submit + .dropdown-toggle-split::after, .dynamic-sidebar .widget input[type="submit"] + .dropdown-toggle-split::after {
+  .btn + .dropdown-toggle-split::after, .nav-links a + .dropdown-toggle-split::after, .comment-form input[type="submit"] + .dropdown-toggle-split::after, .search-form .search-submit + .dropdown-toggle-split::after, .dynamic-sidebar div[class*="subscription"] input[type="submit"] + .dropdown-toggle-split::after {
     margin-left: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .nav-links .btn-group-sm > a + .dropdown-toggle-split, .comment-form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, .search-form .btn-group-sm > .search-submit + .dropdown-toggle-split, .dynamic-sidebar .widget .btn-group-sm > input[type="submit"] + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .nav-links .btn-group-sm > a + .dropdown-toggle-split, .comment-form .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, .search-form .btn-group-sm > .search-submit + .dropdown-toggle-split, .dynamic-sidebar div[class*="subscription"] .btn-group-sm > input[type="submit"] + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .nav-links .btn-group-lg > a + .dropdown-toggle-split, .comment-form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .search-form .btn-group-lg > .search-submit + .dropdown-toggle-split, .dynamic-sidebar .widget .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .nav-links a + .dropdown-toggle-split, .dynamic-sidebar .widget input[type="submit"] + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .nav-links .btn-group-lg > a + .dropdown-toggle-split, .comment-form .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .search-form .btn-group-lg > .search-submit + .dropdown-toggle-split, .dynamic-sidebar div[class*="subscription"] .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .nav-links a + .dropdown-toggle-split, .dynamic-sidebar div[class*="subscription"] input[type="submit"] + .dropdown-toggle-split {
   padding-right: 1.125rem;
   padding-left: 1.125rem; }
 
-.btn .caret, .nav-links a .caret, .comment-form input[type="submit"] .caret, .search-form .search-submit .caret, .dynamic-sidebar .widget input[type="submit"] .caret {
+.btn .caret, .nav-links a .caret, .comment-form input[type="submit"] .caret, .search-form .search-submit .caret, .dynamic-sidebar div[class*="subscription"] input[type="submit"] .caret {
   margin-left: 0; }
 
-.btn-lg .caret, .btn-group-lg > .btn .caret, .comment-form .btn-group-lg > input[type="submit"] .caret, .search-form .btn-group-lg > .search-submit .caret, .nav-links a .caret, .dynamic-sidebar .widget input[type="submit"] .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .comment-form .btn-group-lg > input[type="submit"] .caret, .search-form .btn-group-lg > .search-submit .caret, .nav-links a .caret, .dynamic-sidebar div[class*="subscription"] input[type="submit"] .caret {
   border-width: 0.3em 0.3em 0;
   border-bottom-width: 0; }
 
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .comment-form .btn-group-lg > input[type="submit"] .caret, .comment-form .dropup .btn-group-lg > input[type="submit"] .caret, .dropup .search-form .btn-group-lg > .search-submit .caret, .search-form .dropup .btn-group-lg > .search-submit .caret, .dropup .nav-links a .caret, .nav-links .dropup a .caret, .dropup .dynamic-sidebar .widget input[type="submit"] .caret, .dynamic-sidebar .widget .dropup input[type="submit"] .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .comment-form .btn-group-lg > input[type="submit"] .caret, .comment-form .dropup .btn-group-lg > input[type="submit"] .caret, .dropup .search-form .btn-group-lg > .search-submit .caret, .search-form .dropup .btn-group-lg > .search-submit .caret, .dropup .nav-links a .caret, .nav-links .dropup a .caret, .dropup .dynamic-sidebar div[class*="subscription"] input[type="submit"] .caret, .dynamic-sidebar div[class*="subscription"] .dropup input[type="submit"] .caret {
   border-width: 0 0.3em 0.3em; }
 
-.btn-group-vertical > .btn, .nav-links .btn-group-vertical > a, .comment-form .btn-group-vertical > input[type="submit"], .search-form .btn-group-vertical > .search-submit, .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"],
+.btn-group-vertical > .btn, .nav-links .btn-group-vertical > a, .comment-form .btn-group-vertical > input[type="submit"], .search-form .btn-group-vertical > .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"],
 .btn-group-vertical > .btn-group,
 .btn-group-vertical > .btn-group > .btn, .nav-links
 .btn-group-vertical > .btn-group > a, .comment-form
 .btn-group-vertical > .btn-group > input[type="submit"], .search-form
-.btn-group-vertical > .btn-group > .search-submit, .dynamic-sidebar .widget
+.btn-group-vertical > .btn-group > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .btn-group-vertical > .btn-group > input[type="submit"] {
   display: block;
   float: none;
@@ -11363,62 +11364,62 @@ input[type="button"].btn-block {
   display: table;
   clear: both; }
 
-.btn-group-vertical > .btn-group > .btn, .nav-links .btn-group-vertical > .btn-group > a, .comment-form .btn-group-vertical > .btn-group > input[type="submit"], .search-form .btn-group-vertical > .btn-group > .search-submit, .dynamic-sidebar .widget .btn-group-vertical > .btn-group > input[type="submit"] {
+.btn-group-vertical > .btn-group > .btn, .nav-links .btn-group-vertical > .btn-group > a, .comment-form .btn-group-vertical > .btn-group > input[type="submit"], .search-form .btn-group-vertical > .btn-group > .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > .btn-group > input[type="submit"] {
   float: none; }
 
-.btn-group-vertical > .btn + .btn, .nav-links .btn-group-vertical > a + .btn, .comment-form .btn-group-vertical > input[type="submit"] + .btn, .search-form .btn-group-vertical > .search-submit + .btn, .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"] + .btn, .nav-links .btn-group-vertical > .btn + a, .nav-links .btn-group-vertical > a + a, .comment-form .nav-links .btn-group-vertical > input[type="submit"] + a, .nav-links .comment-form .btn-group-vertical > input[type="submit"] + a, .search-form .nav-links .btn-group-vertical > .search-submit + a, .nav-links .search-form .btn-group-vertical > .search-submit + a, .dynamic-sidebar .widget .nav-links .btn-group-vertical > input[type="submit"] + a, .nav-links .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"] + a, .comment-form .btn-group-vertical > .btn + input[type="submit"], .nav-links .comment-form .btn-group-vertical > a + input[type="submit"], .comment-form .nav-links .btn-group-vertical > a + input[type="submit"], .comment-form .btn-group-vertical > input[type="submit"] + input[type="submit"], .search-form .comment-form .btn-group-vertical > .search-submit + input[type="submit"], .comment-form .search-form .btn-group-vertical > .search-submit + input[type="submit"], .search-form .btn-group-vertical > .btn + .search-submit, .nav-links .search-form .btn-group-vertical > a + .search-submit, .search-form .nav-links .btn-group-vertical > a + .search-submit, .comment-form .search-form .btn-group-vertical > input[type="submit"] + .search-submit, .search-form .comment-form .btn-group-vertical > input[type="submit"] + .search-submit, .search-form .btn-group-vertical > .search-submit + .search-submit, .dynamic-sidebar .widget .search-form .btn-group-vertical > input[type="submit"] + .search-submit, .search-form .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"] + .search-submit, .dynamic-sidebar .widget .btn-group-vertical > .btn + input[type="submit"], .nav-links .dynamic-sidebar .widget .btn-group-vertical > a + input[type="submit"], .dynamic-sidebar .widget .nav-links .btn-group-vertical > a + input[type="submit"], .search-form .dynamic-sidebar .widget .btn-group-vertical > .search-submit + input[type="submit"], .dynamic-sidebar .widget .search-form .btn-group-vertical > .search-submit + input[type="submit"], .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"] + input[type="submit"],
+.btn-group-vertical > .btn + .btn, .nav-links .btn-group-vertical > a + .btn, .comment-form .btn-group-vertical > input[type="submit"] + .btn, .search-form .btn-group-vertical > .search-submit + .btn, .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"] + .btn, .nav-links .btn-group-vertical > .btn + a, .nav-links .btn-group-vertical > a + a, .comment-form .nav-links .btn-group-vertical > input[type="submit"] + a, .nav-links .comment-form .btn-group-vertical > input[type="submit"] + a, .search-form .nav-links .btn-group-vertical > .search-submit + a, .nav-links .search-form .btn-group-vertical > .search-submit + a, .dynamic-sidebar div[class*="subscription"] .nav-links .btn-group-vertical > input[type="submit"] + a, .nav-links .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"] + a, .comment-form .btn-group-vertical > .btn + input[type="submit"], .nav-links .comment-form .btn-group-vertical > a + input[type="submit"], .comment-form .nav-links .btn-group-vertical > a + input[type="submit"], .comment-form .btn-group-vertical > input[type="submit"] + input[type="submit"], .search-form .comment-form .btn-group-vertical > .search-submit + input[type="submit"], .comment-form .search-form .btn-group-vertical > .search-submit + input[type="submit"], .search-form .btn-group-vertical > .btn + .search-submit, .nav-links .search-form .btn-group-vertical > a + .search-submit, .search-form .nav-links .btn-group-vertical > a + .search-submit, .comment-form .search-form .btn-group-vertical > input[type="submit"] + .search-submit, .search-form .comment-form .btn-group-vertical > input[type="submit"] + .search-submit, .search-form .btn-group-vertical > .search-submit + .search-submit, .dynamic-sidebar div[class*="subscription"] .search-form .btn-group-vertical > input[type="submit"] + .search-submit, .search-form .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"] + .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > .btn + input[type="submit"], .nav-links .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > a + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .nav-links .btn-group-vertical > a + input[type="submit"], .search-form .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > .search-submit + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .search-form .btn-group-vertical > .search-submit + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"] + input[type="submit"],
 .btn-group-vertical > .btn + .btn-group, .nav-links
 .btn-group-vertical > a + .btn-group, .comment-form
 .btn-group-vertical > input[type="submit"] + .btn-group, .search-form
-.btn-group-vertical > .search-submit + .btn-group, .dynamic-sidebar .widget
+.btn-group-vertical > .search-submit + .btn-group, .dynamic-sidebar div[class*="subscription"]
 .btn-group-vertical > input[type="submit"] + .btn-group,
 .btn-group-vertical > .btn-group + .btn, .nav-links
 .btn-group-vertical > .btn-group + a, .comment-form
 .btn-group-vertical > .btn-group + input[type="submit"], .search-form
-.btn-group-vertical > .btn-group + .search-submit, .dynamic-sidebar .widget
+.btn-group-vertical > .btn-group + .search-submit, .dynamic-sidebar div[class*="subscription"]
 .btn-group-vertical > .btn-group + input[type="submit"],
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
-.btn-group-vertical > .btn:not(:first-child):not(:last-child), .nav-links .btn-group-vertical > a:not(:first-child):not(:last-child), .comment-form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), .search-form .btn-group-vertical > .search-submit:not(:first-child):not(:last-child), .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .nav-links .btn-group-vertical > a:not(:first-child):not(:last-child), .comment-form .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child), .search-form .btn-group-vertical > .search-submit:not(:first-child):not(:last-child), .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"]:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
-.btn-group-vertical > .btn:first-child:not(:last-child), .nav-links .btn-group-vertical > a:first-child:not(:last-child), .comment-form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), .search-form .btn-group-vertical > .search-submit:first-child:not(:last-child), .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"]:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .nav-links .btn-group-vertical > a:first-child:not(:last-child), .comment-form .btn-group-vertical > input[type="submit"]:first-child:not(:last-child), .search-form .btn-group-vertical > .search-submit:first-child:not(:last-child), .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"]:first-child:not(:last-child) {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn:last-child:not(:first-child), .nav-links .btn-group-vertical > a:last-child:not(:first-child), .comment-form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), .search-form .btn-group-vertical > .search-submit:last-child:not(:first-child), .dynamic-sidebar .widget .btn-group-vertical > input[type="submit"]:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .nav-links .btn-group-vertical > a:last-child:not(:first-child), .comment-form .btn-group-vertical > input[type="submit"]:last-child:not(:first-child), .search-form .btn-group-vertical > .search-submit:last-child:not(:first-child), .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > input[type="submit"]:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .nav-links .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .comment-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .search-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .search-submit, .dynamic-sidebar .widget .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .nav-links .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > a, .comment-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"], .search-form .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .search-submit, .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > input[type="submit"] {
   border-radius: 0; }
 
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .nav-links .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .comment-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .search-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > .search-submit:last-child, .dynamic-sidebar .widget .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .nav-links .btn-group-vertical > .btn-group:first-child:not(:last-child) > a:last-child, .comment-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child, .search-form .btn-group-vertical > .btn-group:first-child:not(:last-child) > .search-submit:last-child, .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > .btn-group:first-child:not(:last-child) > input[type="submit"]:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .nav-links .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .comment-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .search-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > .search-submit:first-child, .dynamic-sidebar .widget .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .nav-links .btn-group-vertical > .btn-group:last-child:not(:first-child) > a:first-child, .comment-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child, .search-form .btn-group-vertical > .btn-group:last-child:not(:first-child) > .search-submit:first-child, .dynamic-sidebar div[class*="subscription"] .btn-group-vertical > .btn-group:last-child:not(:first-child) > input[type="submit"]:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
-[data-toggle="buttons"] > .btn input[type="radio"], .nav-links [data-toggle="buttons"] > a input[type="radio"], .comment-form [data-toggle="buttons"] > input[type="submit"] input[type="radio"], .search-form [data-toggle="buttons"] > .search-submit input[type="radio"], .dynamic-sidebar .widget [data-toggle="buttons"] > input[type="submit"] input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], .nav-links [data-toggle="buttons"] > a input[type="radio"], .comment-form [data-toggle="buttons"] > input[type="submit"] input[type="radio"], .search-form [data-toggle="buttons"] > .search-submit input[type="radio"], .dynamic-sidebar div[class*="subscription"] [data-toggle="buttons"] > input[type="submit"] input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"], .nav-links
 [data-toggle="buttons"] > a input[type="checkbox"], .comment-form
 [data-toggle="buttons"] > input[type="submit"] input[type="checkbox"], .search-form
-[data-toggle="buttons"] > .search-submit input[type="checkbox"], .dynamic-sidebar .widget
+[data-toggle="buttons"] > .search-submit input[type="checkbox"], .dynamic-sidebar div[class*="subscription"]
 [data-toggle="buttons"] > input[type="submit"] input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"], .nav-links
 [data-toggle="buttons"] > .btn-group > a input[type="radio"], .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"], .search-form
-[data-toggle="buttons"] > .btn-group > .search-submit input[type="radio"], .dynamic-sidebar .widget
+[data-toggle="buttons"] > .btn-group > .search-submit input[type="radio"], .dynamic-sidebar div[class*="subscription"]
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="radio"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"], .nav-links
 [data-toggle="buttons"] > .btn-group > a input[type="checkbox"], .comment-form
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"], .search-form
-[data-toggle="buttons"] > .btn-group > .search-submit input[type="checkbox"], .dynamic-sidebar .widget
+[data-toggle="buttons"] > .btn-group > .search-submit input[type="checkbox"], .dynamic-sidebar div[class*="subscription"]
 [data-toggle="buttons"] > .btn-group > input[type="submit"] input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -11434,7 +11435,7 @@ input[type="button"].btn-block {
   .comment-form input[type="url"],
   .comment-form .input-group input[type="url"], .input-group
   .comment-form textarea,
-  .comment-form .input-group textarea, .input-group .search-form .search-field, .search-form .input-group .search-field, .input-group .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget .input-group input[type="text"], .input-group .dynamic-sidebar .widget input[type="email"], .dynamic-sidebar .widget .input-group input[type="email"] {
+  .comment-form .input-group textarea, .input-group .search-form .search-field, .search-form .input-group .search-field, .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] .input-group input[type="text"], .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"], .dynamic-sidebar div[class*="subscription"] .input-group input[type="email"] {
     position: relative;
     z-index: 2;
     flex: 1;
@@ -11445,19 +11446,19 @@ input[type="button"].btn-block {
     .comment-form input[type="url"]:focus,
     .comment-form .input-group input[type="url"]:focus, .input-group
     .comment-form textarea:focus,
-    .comment-form .input-group textarea:focus, .input-group .search-form .search-field:focus, .search-form .input-group .search-field:focus, .input-group .dynamic-sidebar .widget input[type="text"]:focus, .dynamic-sidebar .widget .input-group input[type="text"]:focus, .input-group .dynamic-sidebar .widget input[type="email"]:focus, .dynamic-sidebar .widget .input-group input[type="email"]:focus, .input-group .form-control:active, .input-group .comment-form input[type="text"]:active, .comment-form .input-group input[type="text"]:active, .input-group
+    .comment-form .input-group textarea:focus, .input-group .search-form .search-field:focus, .search-form .input-group .search-field:focus, .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"]:focus, .dynamic-sidebar div[class*="subscription"] .input-group input[type="text"]:focus, .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"]:focus, .dynamic-sidebar div[class*="subscription"] .input-group input[type="email"]:focus, .input-group .form-control:active, .input-group .comment-form input[type="text"]:active, .comment-form .input-group input[type="text"]:active, .input-group
     .comment-form input[type="email"]:active,
     .comment-form .input-group input[type="email"]:active, .input-group
     .comment-form input[type="url"]:active,
     .comment-form .input-group input[type="url"]:active, .input-group
     .comment-form textarea:active,
-    .comment-form .input-group textarea:active, .input-group .search-form .search-field:active, .search-form .input-group .search-field:active, .input-group .dynamic-sidebar .widget input[type="text"]:active, .dynamic-sidebar .widget .input-group input[type="text"]:active, .input-group .dynamic-sidebar .widget input[type="email"]:active, .dynamic-sidebar .widget .input-group input[type="email"]:active, .input-group .form-control:hover, .input-group .comment-form input[type="text"]:hover, .comment-form .input-group input[type="text"]:hover, .input-group
+    .comment-form .input-group textarea:active, .input-group .search-form .search-field:active, .search-form .input-group .search-field:active, .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"]:active, .dynamic-sidebar div[class*="subscription"] .input-group input[type="text"]:active, .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"]:active, .dynamic-sidebar div[class*="subscription"] .input-group input[type="email"]:active, .input-group .form-control:hover, .input-group .comment-form input[type="text"]:hover, .comment-form .input-group input[type="text"]:hover, .input-group
     .comment-form input[type="email"]:hover,
     .comment-form .input-group input[type="email"]:hover, .input-group
     .comment-form input[type="url"]:hover,
     .comment-form .input-group input[type="url"]:hover, .input-group
     .comment-form textarea:hover,
-    .comment-form .input-group textarea:hover, .input-group .search-form .search-field:hover, .search-form .input-group .search-field:hover, .input-group .dynamic-sidebar .widget input[type="text"]:hover, .dynamic-sidebar .widget .input-group input[type="text"]:hover, .input-group .dynamic-sidebar .widget input[type="email"]:hover, .dynamic-sidebar .widget .input-group input[type="email"]:hover {
+    .comment-form .input-group textarea:hover, .input-group .search-form .search-field:hover, .search-form .input-group .search-field:hover, .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"]:hover, .dynamic-sidebar div[class*="subscription"] .input-group input[type="text"]:hover, .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"]:hover, .dynamic-sidebar div[class*="subscription"] .input-group input[type="email"]:hover {
       z-index: 3; }
 
 .input-group-addon:not(:first-child):not(:last-child),
@@ -11479,9 +11480,9 @@ input[type="button"].btn-block {
 .input-group textarea:not(:first-child):not(:last-child),
 .input-group .search-form .search-field:not(:first-child):not(:last-child), .search-form
 .input-group .search-field:not(:first-child):not(:last-child),
-.input-group .dynamic-sidebar .widget input[type="text"]:not(:first-child):not(:last-child), .dynamic-sidebar .widget
+.input-group .dynamic-sidebar div[class*="subscription"] input[type="text"]:not(:first-child):not(:last-child), .dynamic-sidebar div[class*="subscription"]
 .input-group input[type="text"]:not(:first-child):not(:last-child),
-.input-group .dynamic-sidebar .widget input[type="email"]:not(:first-child):not(:last-child), .dynamic-sidebar .widget
+.input-group .dynamic-sidebar div[class*="subscription"] input[type="email"]:not(:first-child):not(:last-child), .dynamic-sidebar div[class*="subscription"]
 .input-group input[type="email"]:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
@@ -11504,12 +11505,12 @@ input[type="button"].btn-block {
   .input-group-addon.form-control-sm, .comment-form .input-group-sm > input.input-group-addon[type="text"],
   .comment-form .input-group-sm > input.input-group-addon[type="email"],
   .comment-form .input-group-sm > input.input-group-addon[type="url"],
-  .comment-form .input-group-sm > textarea.input-group-addon, .search-form .input-group-sm > .input-group-addon.search-field, .dynamic-sidebar .widget .input-group-sm > input.input-group-addon[type="text"], .dynamic-sidebar .widget .input-group-sm > input.input-group-addon[type="email"],
+  .comment-form .input-group-sm > textarea.input-group-addon, .search-form .input-group-sm > .input-group-addon.search-field, .dynamic-sidebar div[class*="subscription"] .input-group-sm > input.input-group-addon[type="text"], .dynamic-sidebar div[class*="subscription"] .input-group-sm > input.input-group-addon[type="email"],
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn, .nav-links
   .input-group-sm > .input-group-btn > a.input-group-addon, .comment-form
   .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"], .search-form
-  .input-group-sm > .input-group-btn > .input-group-addon.search-submit, .dynamic-sidebar .widget
+  .input-group-sm > .input-group-btn > .input-group-addon.search-submit, .dynamic-sidebar div[class*="subscription"]
   .input-group-sm > .input-group-btn > input.input-group-addon[type="submit"] {
     padding: 0.25rem 0.5rem;
     font-size: 0.875rem;
@@ -11517,12 +11518,12 @@ input[type="button"].btn-block {
   .input-group-addon.form-control-lg, .comment-form .input-group-lg > input.input-group-addon[type="text"],
   .comment-form .input-group-lg > input.input-group-addon[type="email"],
   .comment-form .input-group-lg > input.input-group-addon[type="url"],
-  .comment-form .input-group-lg > textarea.input-group-addon, .search-form .input-group-lg > .input-group-addon.search-field, .dynamic-sidebar .widget .input-group-lg > input.input-group-addon[type="text"], .dynamic-sidebar .widget .input-group-lg > input.input-group-addon[type="email"],
+  .comment-form .input-group-lg > textarea.input-group-addon, .search-form .input-group-lg > .input-group-addon.search-field, .dynamic-sidebar div[class*="subscription"] .input-group-lg > input.input-group-addon[type="text"], .dynamic-sidebar div[class*="subscription"] .input-group-lg > input.input-group-addon[type="email"],
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn, .nav-links
   .input-group-lg > .input-group-btn > a.input-group-addon, .comment-form
   .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"], .search-form
-  .input-group-lg > .input-group-btn > .input-group-addon.search-submit, .dynamic-sidebar .widget
+  .input-group-lg > .input-group-btn > .input-group-addon.search-submit, .dynamic-sidebar div[class*="subscription"]
   .input-group-lg > .input-group-btn > input.input-group-addon[type="submit"] {
     padding: 0.75rem 1.5rem;
     font-size: 1.25rem;
@@ -11537,28 +11538,28 @@ input[type="button"].btn-block {
 .comment-form input[type="url"]:not(:last-child),
 .comment-form .input-group input[type="url"]:not(:last-child), .input-group
 .comment-form textarea:not(:last-child),
-.comment-form .input-group textarea:not(:last-child), .input-group .search-form .search-field:not(:last-child), .search-form .input-group .search-field:not(:last-child), .input-group .dynamic-sidebar .widget input[type="text"]:not(:last-child), .dynamic-sidebar .widget .input-group input[type="text"]:not(:last-child), .input-group .dynamic-sidebar .widget input[type="email"]:not(:last-child), .dynamic-sidebar .widget .input-group input[type="email"]:not(:last-child),
+.comment-form .input-group textarea:not(:last-child), .input-group .search-form .search-field:not(:last-child), .search-form .input-group .search-field:not(:last-child), .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"]:not(:last-child), .dynamic-sidebar div[class*="subscription"] .input-group input[type="text"]:not(:last-child), .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"]:not(:last-child), .dynamic-sidebar div[class*="subscription"] .input-group input[type="email"]:not(:last-child),
 .input-group-addon:not(:last-child),
 .input-group-btn:not(:last-child) > .btn, .nav-links
 .input-group-btn:not(:last-child) > a, .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"], .search-form
-.input-group-btn:not(:last-child) > .search-submit, .dynamic-sidebar .widget
+.input-group-btn:not(:last-child) > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:last-child) > input[type="submit"],
 .input-group-btn:not(:last-child) > .btn-group > .btn, .nav-links
 .input-group-btn:not(:last-child) > .btn-group > a, .comment-form
 .input-group-btn:not(:last-child) > .btn-group > input[type="submit"], .search-form
-.input-group-btn:not(:last-child) > .btn-group > .search-submit, .dynamic-sidebar .widget
+.input-group-btn:not(:last-child) > .btn-group > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:last-child) > .btn-group > input[type="submit"],
 .input-group-btn:not(:last-child) > .dropdown-toggle,
 .input-group-btn:not(:first-child) > .btn:not(:last-child):not(.dropdown-toggle), .nav-links
 .input-group-btn:not(:first-child) > a:not(:last-child):not(.dropdown-toggle), .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .search-form
-.input-group-btn:not(:first-child) > .search-submit:not(:last-child):not(.dropdown-toggle), .dynamic-sidebar .widget
+.input-group-btn:not(:first-child) > .search-submit:not(:last-child):not(.dropdown-toggle), .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:first-child) > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .btn, .nav-links
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > a, .comment-form
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"], .search-form
-.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .search-submit, .dynamic-sidebar .widget
+.input-group-btn:not(:first-child) > .btn-group:not(:last-child) > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:first-child) > .btn-group:not(:last-child) > input[type="submit"] {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
@@ -11572,28 +11573,28 @@ input[type="button"].btn-block {
 .comment-form input[type="url"]:not(:first-child),
 .comment-form .input-group input[type="url"]:not(:first-child), .input-group
 .comment-form textarea:not(:first-child),
-.comment-form .input-group textarea:not(:first-child), .input-group .search-form .search-field:not(:first-child), .search-form .input-group .search-field:not(:first-child), .input-group .dynamic-sidebar .widget input[type="text"]:not(:first-child), .dynamic-sidebar .widget .input-group input[type="text"]:not(:first-child), .input-group .dynamic-sidebar .widget input[type="email"]:not(:first-child), .dynamic-sidebar .widget .input-group input[type="email"]:not(:first-child),
+.comment-form .input-group textarea:not(:first-child), .input-group .search-form .search-field:not(:first-child), .search-form .input-group .search-field:not(:first-child), .input-group .dynamic-sidebar div[class*="subscription"] input[type="text"]:not(:first-child), .dynamic-sidebar div[class*="subscription"] .input-group input[type="text"]:not(:first-child), .input-group .dynamic-sidebar div[class*="subscription"] input[type="email"]:not(:first-child), .dynamic-sidebar div[class*="subscription"] .input-group input[type="email"]:not(:first-child),
 .input-group-addon:not(:first-child),
 .input-group-btn:not(:first-child) > .btn, .nav-links
 .input-group-btn:not(:first-child) > a, .comment-form
 .input-group-btn:not(:first-child) > input[type="submit"], .search-form
-.input-group-btn:not(:first-child) > .search-submit, .dynamic-sidebar .widget
+.input-group-btn:not(:first-child) > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:first-child) > input[type="submit"],
 .input-group-btn:not(:first-child) > .btn-group > .btn, .nav-links
 .input-group-btn:not(:first-child) > .btn-group > a, .comment-form
 .input-group-btn:not(:first-child) > .btn-group > input[type="submit"], .search-form
-.input-group-btn:not(:first-child) > .btn-group > .search-submit, .dynamic-sidebar .widget
+.input-group-btn:not(:first-child) > .btn-group > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:first-child) > .btn-group > input[type="submit"],
 .input-group-btn:not(:first-child) > .dropdown-toggle,
 .input-group-btn:not(:last-child) > .btn:not(:first-child), .nav-links
 .input-group-btn:not(:last-child) > a:not(:first-child), .comment-form
 .input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child), .search-form
-.input-group-btn:not(:last-child) > .search-submit:not(:first-child), .dynamic-sidebar .widget
+.input-group-btn:not(:last-child) > .search-submit:not(:first-child), .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:last-child) > input[type="submit"]:not(:first-child),
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .btn, .nav-links
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > a, .comment-form
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"], .search-form
-.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .search-submit, .dynamic-sidebar .widget
+.input-group-btn:not(:last-child) > .btn-group:not(:first-child) > .search-submit, .dynamic-sidebar div[class*="subscription"]
 .input-group-btn:not(:last-child) > .btn-group:not(:first-child) > input[type="submit"] {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -11601,27 +11602,27 @@ input[type="button"].btn-block {
 .form-control + .input-group-addon:not(:first-child), .comment-form input[type="text"] + .input-group-addon:not(:first-child),
 .comment-form input[type="email"] + .input-group-addon:not(:first-child),
 .comment-form input[type="url"] + .input-group-addon:not(:first-child),
-.comment-form textarea + .input-group-addon:not(:first-child), .search-form .search-field + .input-group-addon:not(:first-child), .dynamic-sidebar .widget input[type="text"] + .input-group-addon:not(:first-child), .dynamic-sidebar .widget input[type="email"] + .input-group-addon:not(:first-child) {
+.comment-form textarea + .input-group-addon:not(:first-child), .search-form .search-field + .input-group-addon:not(:first-child), .dynamic-sidebar div[class*="subscription"] input[type="text"] + .input-group-addon:not(:first-child), .dynamic-sidebar div[class*="subscription"] input[type="email"] + .input-group-addon:not(:first-child) {
   border-left: 0; }
 
 .input-group-btn {
   position: relative;
   font-size: 0;
   white-space: nowrap; }
-  .input-group-btn > .btn, .nav-links .input-group-btn > a, .comment-form .input-group-btn > input[type="submit"], .search-form .input-group-btn > .search-submit, .dynamic-sidebar .widget .input-group-btn > input[type="submit"] {
+  .input-group-btn > .btn, .nav-links .input-group-btn > a, .comment-form .input-group-btn > input[type="submit"], .search-form .input-group-btn > .search-submit, .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"] {
     position: relative; }
-    .input-group-btn > .btn + .btn, .nav-links .input-group-btn > a + .btn, .comment-form .input-group-btn > input[type="submit"] + .btn, .search-form .input-group-btn > .search-submit + .btn, .dynamic-sidebar .widget .input-group-btn > input[type="submit"] + .btn, .nav-links .input-group-btn > .btn + a, .nav-links .input-group-btn > a + a, .comment-form .nav-links .input-group-btn > input[type="submit"] + a, .nav-links .comment-form .input-group-btn > input[type="submit"] + a, .search-form .nav-links .input-group-btn > .search-submit + a, .nav-links .search-form .input-group-btn > .search-submit + a, .dynamic-sidebar .widget .nav-links .input-group-btn > input[type="submit"] + a, .nav-links .dynamic-sidebar .widget .input-group-btn > input[type="submit"] + a, .comment-form .input-group-btn > .btn + input[type="submit"], .nav-links .comment-form .input-group-btn > a + input[type="submit"], .comment-form .nav-links .input-group-btn > a + input[type="submit"], .comment-form .input-group-btn > input[type="submit"] + input[type="submit"], .search-form .comment-form .input-group-btn > .search-submit + input[type="submit"], .comment-form .search-form .input-group-btn > .search-submit + input[type="submit"], .search-form .input-group-btn > .btn + .search-submit, .nav-links .search-form .input-group-btn > a + .search-submit, .search-form .nav-links .input-group-btn > a + .search-submit, .comment-form .search-form .input-group-btn > input[type="submit"] + .search-submit, .search-form .comment-form .input-group-btn > input[type="submit"] + .search-submit, .search-form .input-group-btn > .search-submit + .search-submit, .dynamic-sidebar .widget .search-form .input-group-btn > input[type="submit"] + .search-submit, .search-form .dynamic-sidebar .widget .input-group-btn > input[type="submit"] + .search-submit, .dynamic-sidebar .widget .input-group-btn > .btn + input[type="submit"], .nav-links .dynamic-sidebar .widget .input-group-btn > a + input[type="submit"], .dynamic-sidebar .widget .nav-links .input-group-btn > a + input[type="submit"], .search-form .dynamic-sidebar .widget .input-group-btn > .search-submit + input[type="submit"], .dynamic-sidebar .widget .search-form .input-group-btn > .search-submit + input[type="submit"], .dynamic-sidebar .widget .input-group-btn > input[type="submit"] + input[type="submit"] {
+    .input-group-btn > .btn + .btn, .nav-links .input-group-btn > a + .btn, .comment-form .input-group-btn > input[type="submit"] + .btn, .search-form .input-group-btn > .search-submit + .btn, .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"] + .btn, .nav-links .input-group-btn > .btn + a, .nav-links .input-group-btn > a + a, .comment-form .nav-links .input-group-btn > input[type="submit"] + a, .nav-links .comment-form .input-group-btn > input[type="submit"] + a, .search-form .nav-links .input-group-btn > .search-submit + a, .nav-links .search-form .input-group-btn > .search-submit + a, .dynamic-sidebar div[class*="subscription"] .nav-links .input-group-btn > input[type="submit"] + a, .nav-links .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"] + a, .comment-form .input-group-btn > .btn + input[type="submit"], .nav-links .comment-form .input-group-btn > a + input[type="submit"], .comment-form .nav-links .input-group-btn > a + input[type="submit"], .comment-form .input-group-btn > input[type="submit"] + input[type="submit"], .search-form .comment-form .input-group-btn > .search-submit + input[type="submit"], .comment-form .search-form .input-group-btn > .search-submit + input[type="submit"], .search-form .input-group-btn > .btn + .search-submit, .nav-links .search-form .input-group-btn > a + .search-submit, .search-form .nav-links .input-group-btn > a + .search-submit, .comment-form .search-form .input-group-btn > input[type="submit"] + .search-submit, .search-form .comment-form .input-group-btn > input[type="submit"] + .search-submit, .search-form .input-group-btn > .search-submit + .search-submit, .dynamic-sidebar div[class*="subscription"] .search-form .input-group-btn > input[type="submit"] + .search-submit, .search-form .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"] + .search-submit, .dynamic-sidebar div[class*="subscription"] .input-group-btn > .btn + input[type="submit"], .nav-links .dynamic-sidebar div[class*="subscription"] .input-group-btn > a + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .nav-links .input-group-btn > a + input[type="submit"], .search-form .dynamic-sidebar div[class*="subscription"] .input-group-btn > .search-submit + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .search-form .input-group-btn > .search-submit + input[type="submit"], .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"] + input[type="submit"] {
       margin-left: -1px; }
-    .input-group-btn > .btn:focus, .nav-links .input-group-btn > a:focus, .comment-form .input-group-btn > input[type="submit"]:focus, .search-form .input-group-btn > .search-submit:focus, .dynamic-sidebar .widget .input-group-btn > input[type="submit"]:focus, .input-group-btn > .btn:active, .nav-links .input-group-btn > a:active, .comment-form .input-group-btn > input[type="submit"]:active, .search-form .input-group-btn > .search-submit:active, .dynamic-sidebar .widget .input-group-btn > input[type="submit"]:active, .input-group-btn > .btn:hover, .nav-links .input-group-btn > a:hover, .comment-form .input-group-btn > input[type="submit"]:hover, .search-form .input-group-btn > .search-submit:hover, .dynamic-sidebar .widget .input-group-btn > input[type="submit"]:hover {
+    .input-group-btn > .btn:focus, .nav-links .input-group-btn > a:focus, .comment-form .input-group-btn > input[type="submit"]:focus, .search-form .input-group-btn > .search-submit:focus, .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"]:focus, .input-group-btn > .btn:active, .nav-links .input-group-btn > a:active, .comment-form .input-group-btn > input[type="submit"]:active, .search-form .input-group-btn > .search-submit:active, .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"]:active, .input-group-btn > .btn:hover, .nav-links .input-group-btn > a:hover, .comment-form .input-group-btn > input[type="submit"]:hover, .search-form .input-group-btn > .search-submit:hover, .dynamic-sidebar div[class*="subscription"] .input-group-btn > input[type="submit"]:hover {
       z-index: 3; }
-  .input-group-btn:not(:last-child) > .btn, .nav-links .input-group-btn:not(:last-child) > a, .comment-form .input-group-btn:not(:last-child) > input[type="submit"], .search-form .input-group-btn:not(:last-child) > .search-submit, .dynamic-sidebar .widget .input-group-btn:not(:last-child) > input[type="submit"],
+  .input-group-btn:not(:last-child) > .btn, .nav-links .input-group-btn:not(:last-child) > a, .comment-form .input-group-btn:not(:last-child) > input[type="submit"], .search-form .input-group-btn:not(:last-child) > .search-submit, .dynamic-sidebar div[class*="subscription"] .input-group-btn:not(:last-child) > input[type="submit"],
   .input-group-btn:not(:last-child) > .btn-group {
     margin-right: -1px; }
-  .input-group-btn:not(:first-child) > .btn, .nav-links .input-group-btn:not(:first-child) > a, .comment-form .input-group-btn:not(:first-child) > input[type="submit"], .search-form .input-group-btn:not(:first-child) > .search-submit, .dynamic-sidebar .widget .input-group-btn:not(:first-child) > input[type="submit"],
+  .input-group-btn:not(:first-child) > .btn, .nav-links .input-group-btn:not(:first-child) > a, .comment-form .input-group-btn:not(:first-child) > input[type="submit"], .search-form .input-group-btn:not(:first-child) > .search-submit, .dynamic-sidebar div[class*="subscription"] .input-group-btn:not(:first-child) > input[type="submit"],
   .input-group-btn:not(:first-child) > .btn-group {
     z-index: 2;
     margin-left: -1px; }
-    .input-group-btn:not(:first-child) > .btn:focus, .nav-links .input-group-btn:not(:first-child) > a:focus, .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:focus, .search-form .input-group-btn:not(:first-child) > .search-submit:focus, .dynamic-sidebar .widget .input-group-btn:not(:first-child) > input[type="submit"]:focus, .input-group-btn:not(:first-child) > .btn:active, .nav-links .input-group-btn:not(:first-child) > a:active, .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:active, .search-form .input-group-btn:not(:first-child) > .search-submit:active, .dynamic-sidebar .widget .input-group-btn:not(:first-child) > input[type="submit"]:active, .input-group-btn:not(:first-child) > .btn:hover, .nav-links .input-group-btn:not(:first-child) > a:hover, .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:hover, .search-form .input-group-btn:not(:first-child) > .search-submit:hover, .dynamic-sidebar .widget .input-group-btn:not(:first-child) > input[type="submit"]:hover,
+    .input-group-btn:not(:first-child) > .btn:focus, .nav-links .input-group-btn:not(:first-child) > a:focus, .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:focus, .search-form .input-group-btn:not(:first-child) > .search-submit:focus, .dynamic-sidebar div[class*="subscription"] .input-group-btn:not(:first-child) > input[type="submit"]:focus, .input-group-btn:not(:first-child) > .btn:active, .nav-links .input-group-btn:not(:first-child) > a:active, .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:active, .search-form .input-group-btn:not(:first-child) > .search-submit:active, .dynamic-sidebar div[class*="subscription"] .input-group-btn:not(:first-child) > input[type="submit"]:active, .input-group-btn:not(:first-child) > .btn:hover, .nav-links .input-group-btn:not(:first-child) > a:hover, .comment-form .input-group-btn:not(:first-child) > input[type="submit"]:hover, .search-form .input-group-btn:not(:first-child) > .search-submit:hover, .dynamic-sidebar div[class*="subscription"] .input-group-btn:not(:first-child) > input[type="submit"]:hover,
     .input-group-btn:not(:first-child) > .btn-group:focus,
     .input-group-btn:not(:first-child) > .btn-group:active,
     .input-group-btn:not(:first-child) > .btn-group:hover {
@@ -13239,7 +13240,7 @@ button.close {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-caption .btn, .carousel-caption .nav-links a, .nav-links .carousel-caption a, .carousel-caption .comment-form input[type="submit"], .comment-form .carousel-caption input[type="submit"], .carousel-caption .search-form .search-submit, .search-form .carousel-caption .search-submit, .carousel-caption .dynamic-sidebar .widget input[type="submit"], .dynamic-sidebar .widget .carousel-caption input[type="submit"] {
+  .carousel-caption .btn, .carousel-caption .nav-links a, .nav-links .carousel-caption a, .carousel-caption .comment-form input[type="submit"], .comment-form .carousel-caption input[type="submit"], .carousel-caption .search-form .search-submit, .search-form .carousel-caption .search-submit, .carousel-caption .dynamic-sidebar div[class*="subscription"] input[type="submit"], .dynamic-sidebar div[class*="subscription"] .carousel-caption input[type="submit"] {
     text-shadow: none; }
 
 @media (min-width: 544px) {
@@ -18326,7 +18327,7 @@ a.text-danger:focus, a.text-danger:hover {
   content: '';
   display: table; }
 
-.btn, .nav-links a, .comment-form input[type="submit"], .search-form .search-submit, .dynamic-sidebar .widget input[type="submit"] {
+.btn, .nav-links a, .comment-form input[type="submit"], .search-form .search-submit, .dynamic-sidebar div[class*="subscription"] input[type="submit"] {
   border-radius: 2px; }
 
 .nav-links a {
@@ -18371,7 +18372,7 @@ h1, .h1, .headline {
   color: #4A4A4A;
   font-style: italic; }
 
-h2, .h2, .small-headline {
+h2, .dynamic-sidebar div[class*="subscription"] h3, .h2, .small-headline {
   font-family: "Trade Gothic W01";
   font-weight: bold;
   text-transform: uppercase;
@@ -18392,9 +18393,9 @@ a {
     color: #F1A069;
     text-decoration: none; }
 
-h2 a {
+h2 a, .dynamic-sidebar div[class*="subscription"] h3 a {
   color: #4A4A4A; }
-  h2 a:hover {
+  h2 a:hover, .dynamic-sidebar div[class*="subscription"] h3 a:hover {
     color: #0BB4C9; }
 
 .comment-list {
@@ -18461,7 +18462,7 @@ h2 a {
     padding: 20px;
     border-color: transparent;
     background-color: transparent; }
-    .modal .modal-content h1, .modal .modal-content h2, .modal .modal-content h3, .modal .modal-content h4, .modal .modal-content h5, .modal .modal-content h6 {
+    .modal .modal-content h1, .modal .modal-content h2, .modal .modal-content .dynamic-sidebar div[class*="subscription"] h3, .dynamic-sidebar div[class*="subscription"] .modal .modal-content h3, .modal .modal-content h3, .modal .modal-content h4, .modal .modal-content h5, .modal .modal-content h6 {
       font-family: "Trade Gothic W01";
       font-weight: bold;
       text-transform: uppercase;
@@ -18544,7 +18545,7 @@ header.banner {
       top: -2px; }
   header.banner .social-media {
     width: 110px; }
-  header.banner .btn, header.banner .nav-links a, .nav-links header.banner a, header.banner .comment-form input[type="submit"], .comment-form header.banner input[type="submit"], header.banner .search-form .search-submit, .search-form header.banner .search-submit, header.banner .dynamic-sidebar .widget input[type="submit"], .dynamic-sidebar .widget header.banner input[type="submit"] {
+  header.banner .btn, header.banner .nav-links a, .nav-links header.banner a, header.banner .comment-form input[type="submit"], .comment-form header.banner input[type="submit"], header.banner .search-form .search-submit, .search-form header.banner .search-submit, header.banner .dynamic-sidebar div[class*="subscription"] input[type="submit"], .dynamic-sidebar div[class*="subscription"] header.banner input[type="submit"] {
     height: 50px;
     width: 60px;
     margin: 15px;
@@ -18683,30 +18684,30 @@ div[class*="search"]::before {
   .dynamic-sidebar a:hover {
     color: #0BB4C9; }
 
-.dynamic-sidebar .widget {
+.dynamic-sidebar div[class*="subscription"] {
   margin: auto;
   padding: 20px; }
   @media (min-width: 992px) {
-    .dynamic-sidebar .widget {
+    .dynamic-sidebar div[class*="subscription"] {
       padding: 40px; } }
-  .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget input[type="email"] {
+  .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] input[type="email"] {
     border-color: transparent;
     color: #4A4A4A; }
-  .dynamic-sidebar .widget input[type="text"], .dynamic-sidebar .widget input[type="email"] {
+  .dynamic-sidebar div[class*="subscription"] input[type="text"], .dynamic-sidebar div[class*="subscription"] input[type="email"] {
     width: 100%;
     max-width: 600px;
     margin: auto; }
-  .dynamic-sidebar .widget #widget-title {
+  .dynamic-sidebar div[class*="subscription"] #widget-title {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px; }
-    .dynamic-sidebar .widget #widget-title i.fa {
+    .dynamic-sidebar div[class*="subscription"] #widget-title i.fa {
       font-size: 28px;
       margin-right: 5px; }
-    .dynamic-sidebar .widget #widget-title h2 {
+    .dynamic-sidebar div[class*="subscription"] #widget-title h2, .dynamic-sidebar div[class*="subscription"] #widget-title h3 {
       margin-bottom: 0px; }
 
 section.content-wrap {
@@ -18738,7 +18739,7 @@ body.single .sidebar-posts {
   @media (min-width: 992px) {
     body.single .sidebar-posts {
       display: block; } }
-  body.single .sidebar-posts h1, body.single .sidebar-posts h2, body.single .sidebar-posts h3, body.single .sidebar-posts h4, body.single .sidebar-posts h5 {
+  body.single .sidebar-posts h1, body.single .sidebar-posts h2, body.single .sidebar-posts .dynamic-sidebar div[class*="subscription"] h3, .dynamic-sidebar div[class*="subscription"] body.single .sidebar-posts h3, body.single .sidebar-posts h3, body.single .sidebar-posts h4, body.single .sidebar-posts h5 {
     font-family: "Trade Gothic W01";
     font-weight: bold;
     text-transform: uppercase;
@@ -19184,7 +19185,7 @@ article.post-type-threesixty .post-content .post-author {
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px; }
-  #author-box .btn, #author-box .nav-links a, .nav-links #author-box a, #author-box .comment-form input[type="submit"], .comment-form #author-box input[type="submit"], #author-box .search-form .search-submit, .search-form #author-box .search-submit, #author-box .dynamic-sidebar .widget input[type="submit"], .dynamic-sidebar .widget #author-box input[type="submit"] {
+  #author-box .btn, #author-box .nav-links a, .nav-links #author-box a, #author-box .comment-form input[type="submit"], .comment-form #author-box input[type="submit"], #author-box .search-form .search-submit, .search-form #author-box .search-submit, #author-box .dynamic-sidebar div[class*="subscription"] input[type="submit"], .dynamic-sidebar div[class*="subscription"] #author-box input[type="submit"] {
     width: 100%;
     max-width: 500px;
     display: block;
