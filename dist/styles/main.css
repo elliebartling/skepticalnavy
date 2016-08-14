@@ -18531,7 +18531,6 @@ header.banner {
       display: none; }
   header.banner a.brand {
     margin: auto;
-    flex-grow: 2;
     color: #000455; }
     header.banner a.brand .brand-name {
       display: none; }
@@ -18918,6 +18917,10 @@ article.postify.has-thumbnail.featured-post {
   height: 500px;
   position: relative;
   display: block; }
+  @media (min-width: 992px) {
+    article.postify.has-thumbnail.featured-post {
+      max-height: 650px;
+      height: 650px; } }
   article.postify.has-thumbnail.featured-post .post-content {
     position: absolute;
     bottom: 10px; }

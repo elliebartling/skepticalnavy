@@ -6,10 +6,15 @@
  */
 function recent_posts_grid($atts) {
 
+  if ($atts['offset']) {
+    $offset = 1;
+  }
+
   $args = array(
     'post_type' => $atts['type'],
     'post_status' => 'publish',
-    'posts_per_page' => $atts['get']
+    'posts_per_page' => $atts['get'],
+    'offset' => $offset
   );
 
   $options = array(
@@ -154,34 +159,34 @@ add_shortcode( 'tsl_section_header' , 'section_header' );
  			echo '</h5>';
  		}
 
- 		echo '<div class="contact-links"><ul class="social-links">';
-
-
- 		if ( get_the_author_meta( 'twitter', $editor->ID ) != '' ) {
- 			echo '<li><a href="http://twitter.com/';
- 			echo get_the_author_meta( 'twitter', $editor->ID );
- 			echo '"><i class="fa fa-twitter"></i></a></li>';
- 		}
-
- 		if ( get_the_author_meta( 'facebook', $editor->ID ) != '' ) {
- 			echo '<li><a href="http://';
- 			echo get_the_author_meta( 'facebook', $editor->ID );
- 			echo '"><i class="fa fa-facebook"></i></a></li>';
- 		}
-
- 		if ( get_the_author_meta( 'website', $editor->ID ) != '' ) {
- 			echo '<li><a href="http://';
- 			echo get_the_author_meta( 'website', $editor->ID );
- 			echo '"><i class="fa fa-laptop"></i></a></li>';
- 		}
-
- 		if ( get_the_author_meta( 'public_email', $editor->ID ) != '' ) {
- 			echo '<li><a href="mailto:';
- 			echo get_the_author_meta( 'public_email', $editor->ID );
- 			echo '"><i class="fa fa-envelope-o"></i></a></li>';
- 		}
-
- 		echo '</ul></div>';
+ 	// 	echo '<div class="contact-links"><ul class="social-links">';
+    //
+    //
+ 	// 	if ( get_the_author_meta( 'twitter', $editor->ID ) != '' ) {
+ 	// 		echo '<li><a href="http://twitter.com/';
+ 	// 		echo get_the_author_meta( 'twitter', $editor->ID );
+ 	// 		echo '"><i class="fa fa-twitter"></i></a></li>';
+ 	// 	}
+    //
+ 	// 	if ( get_the_author_meta( 'facebook', $editor->ID ) != '' ) {
+ 	// 		echo '<li><a href="http://';
+ 	// 		echo get_the_author_meta( 'facebook', $editor->ID );
+ 	// 		echo '"><i class="fa fa-facebook"></i></a></li>';
+ 	// 	}
+    //
+ 	// 	if ( get_the_author_meta( 'website', $editor->ID ) != '' ) {
+ 	// 		echo '<li><a href="http://';
+ 	// 		echo get_the_author_meta( 'website', $editor->ID );
+ 	// 		echo '"><i class="fa fa-laptop"></i></a></li>';
+ 	// 	}
+    //
+ 	// 	if ( get_the_author_meta( 'public_email', $editor->ID ) != '' ) {
+ 	// 		echo '<li><a href="mailto:';
+ 	// 		echo get_the_author_meta( 'public_email', $editor->ID );
+ 	// 		echo '"><i class="fa fa-envelope-o"></i></a></li>';
+ 	// 	}
+    //
+ 	// 	echo '</ul></div>';
  		echo "</div>";
  		echo "</li>";
  	}
