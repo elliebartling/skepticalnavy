@@ -29,10 +29,10 @@
 
 
     </section>
-    <div id="footer-social" class="entry-social ssk-group ssk-text" data-url="<?= get_the_permalink(); ?>">
-      <a href="" class="ssk ssk-text ssk-facebook">Facebook</a>
-      <a href="" class="ssk ssk-text ssk-twitter">Twitter</a>
-      <a href="" class="ssk ssk-text ssk-reddit">Reddit</a>
+    <div id="footer-social" class="entry-social ssk-group ssk-text" >
+      <a href="" data-url="<?= get_the_permalink(); ?>" class="ssk ssk-text ssk-facebook">Facebook</a>
+      <a href="" data-url="<?= get_the_permalink(); ?>" class="ssk ssk-text ssk-twitter">Twitter</a>
+      <a href="" data-url="<?= get_the_permalink(); ?>" class="ssk ssk-text ssk-reddit">Reddit</a>
     </div>
     <aside class="sidebar-posts bottom">
       <?php dynamic_sidebar('sidebar-primary'); ?>

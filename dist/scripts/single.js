@@ -500,6 +500,7 @@ if (window.jQuery) {
     console.log(text);
     $('blockquote.twitter-me').wrapInner("<a target='_new' href='" + url + "' class='ssk-twitter'></a>");
     $('.sticky').Stickyfill();
+    SocialShareKit.init();
     return true;
   })(jQuery);
 }).call(undefined);
