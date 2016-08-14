@@ -18800,6 +18800,8 @@ body.single .sidebar-posts.bottom {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap; }
+  body.single .sidebar-posts.bottom .yarpp-thumbnail img {
+    height: 170px; }
 
 body.single #footer-social {
   display: none; }
