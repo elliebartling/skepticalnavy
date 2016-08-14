@@ -13,7 +13,6 @@
     <section class="content-wrap">
       <div class="entry-content">
         <header>
-          <?php get_template_part('templates/entry-tags'); ?>
           <h1 class="entry-title"><?php the_title(); ?></h1>
           <?php get_template_part('templates/entry-social'); ?>
         </header>
