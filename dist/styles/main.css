@@ -19095,7 +19095,8 @@ article.post-type-threesixty .post-content .post-author {
     .single main .alignleft {
       float: left; }
     .single main img {
-      margin: 1rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
       max-width: 100%;
       object-fit: contain; }
     .single main table {
