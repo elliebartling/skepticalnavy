@@ -72,7 +72,7 @@ body.single .sidebar-posts
       margin-top: 20px
       color: $transp-black-7
       font-size: 30px
-      border-bottom: 20px solid lighten($brand-warning, 10%)
+      border-bottom: 20px solid lighten($brand-info, 10%)
       line-height: 5px
     .yarpp-thumbnails
       display: block
@@ -108,10 +108,18 @@ body.single .sidebar-posts.bottom
   margin-top: 2rem
   width: 100% !important
   max-width: 100%
+  margin-top: 0px
+  +breakpoint($md)
+    margin-top: 2rem
   .yarpp-thumbnails-horizontal
     display: flex
     flex-direction: row
     flex-wrap: nowrap
+
+body.single #footer-social
+  display: none
+  +breakpoint($md)
+    display: flex
 
 #footer-social a
   margin-right: 5px

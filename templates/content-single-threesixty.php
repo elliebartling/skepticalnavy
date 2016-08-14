@@ -22,10 +22,6 @@
         </div>
       </div>
 
-      <aside class="sidebar sticky">
-        <?php dynamic_sidebar('sidebar-primary'); ?>
-      </aside><!-- /.sidebar -->
-
     </section>
   </article>
 <?php endwhile; ?>

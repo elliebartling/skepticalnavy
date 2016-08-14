@@ -19,7 +19,9 @@
           <?php get_template_part('templates/entry-social'); ?>
         </header>
         <?php the_content(); ?>
+        <div class="skeptical-divider"><img class="brand" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/brand.png"/></div>
       </div>
+
 
       <aside class="sidebar-posts sticky">
         <?php dynamic_sidebar('sidebar-primary'); ?>

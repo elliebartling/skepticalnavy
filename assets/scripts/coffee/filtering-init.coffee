@@ -2,14 +2,14 @@
   console.log "filtering-init loaded"
   $grids = $('.post-grid')
 
-  # $grids.each ->
-  #   $('.post-grid').isotope
-  #     itemSelector: '.post'
-  #     percentPosition: true
-  #     masonry:
-  #       columnWidth: '.grid-sizer'
-  #       gutter: '.gutter-sizer'
-  #   console.log 'First isotope'
+  $grids.each ->
+    $('.post-grid').isotope
+      itemSelector: '.post'
+      percentPosition: true
+      masonry:
+        columnWidth: '.grid-sizer'
+        gutter: '.gutter-sizer'
+    console.log 'First isotope'
 
   $grids.imagesLoaded( ->
     $grids.isotope

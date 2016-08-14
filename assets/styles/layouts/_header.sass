@@ -17,7 +17,7 @@ button.hamburger.is-active
   background-color: transparent
   // transition: all .5s
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
-    background-color: $white
+    background-color: $brand-primary
 
 .hamburger:hover
   opacity: 1
@@ -82,7 +82,7 @@ header.banner
       top: 5px
       left: 0
     #color-bar
-      background-color: $brand-primary
+      background-color: $white
       height: 100%
       width: 0%
       position: absolute
@@ -131,7 +131,7 @@ header.banner.is-active
       top: 0
       transition: all .25s ease-in-out
       z-index: $nav-z-base + 203
-      box-shadow: 2px 2px 0px $transp-black
+      box-shadow: 2px 2px 40px $transp-black
     .nav-primary
       display: flex
       z-index: $nav-z-base + 70
@@ -141,14 +141,15 @@ header.banner.is-active
       align-items: center
       align-content: center
       div
-        margin-top: 10rem
+        margin-top: 7rem
     li.menu-item
       margin-bottom: .7rem
       a
-        color: $white
-        font-family: $incon
-        font-weight: 200
+        color: $brand-primary
+        font-family: $sans
+        font-weight: 100
         font-size: 1.2rem
+        font-size: 1.4rem
         &:hover
           color: $orange
 
@@ -163,6 +164,7 @@ div[class*="search"]
   margin-bottom: auto
   border-radius: 4px
   height: 40px
+  // padding: 0px
   padding: 5px
   padding-left: 15px
   border-color: transparent
@@ -181,6 +183,8 @@ div[class*="search"]
     transition: all .25s
   input[type="submit"]
     display: none
+  label
+    margin-bottom: 0px
 div[class*="search"]::before
   content: "\f002"
   font-family: "FontAwesome"

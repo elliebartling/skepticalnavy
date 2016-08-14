@@ -143,6 +143,18 @@ article.post-type-threesixty .post-content .post-author
   background: $background
   padding: 40px
   margin-bottom: 0px
+  .container
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    +breakpoint($sm)
+      flex-wrap: nowrap
+  .author.coauthor
+    width: 100%
+    margin: auto
+    margin-bottom: 2rem
+    +breakpoint($sm)
+      width: 40%
   .author-photo
     max-width: 200px
     max-height: 200px
@@ -240,3 +252,37 @@ body.single-threesixty .content-wrap
 
 body.single-threesixty .main
   padding-top: 20px
+
+
+.skeptical-divider
+  margin: auto
+  text-align: center
+  position: relative
+  display: flex
+  flex-direction: row
+  flex-wrap: nowrap
+  justify-content: center
+  align-items: center
+  margin-bottom: 0px
+
+.skeptical-divider::before,
+.skeptical-divider::after
+  content: ""
+  border-bottom: 2px solid $transp-black-5
+  width: 100px
+  position: relative
+  opacity: .5
+
+.skeptical-divider::before
+  left: -20px
+
+.skeptical-divider::after
+  right: -20px
+
+
+
+.skeptical-divider img.brand
+  max-width: 40px
+  filter: grayscale(100%)
+  -webkit-filter: grayscale(100%)
+  opacity: .5

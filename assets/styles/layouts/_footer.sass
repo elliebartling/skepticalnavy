@@ -8,10 +8,14 @@ footer
     text-align: center
     h3
       display: none
+    ul
+      padding-left: 0px
     ul li
       list-style-type: none
       display: inline-block
-      margin: 1rem
+      margin: .2rem
+      +breakpoint($md)
+        margin: 2rem
     ul li a
       color: $white
       color: $transp-black-5
@@ -29,3 +33,8 @@ footer
       // opacity: .2
   section[class*="text"]
     padding-top: 0px
+
+body.single footer
+  padding-bottom: 30px
+  +breakpoint($sm)
+    padding-bottom: 0px
