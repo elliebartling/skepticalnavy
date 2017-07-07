@@ -9,14 +9,3 @@
 <section class="dynamic-sidebar">
       <?php dynamic_sidebar('sidebar-email'); ?>
 </section>
-<section class="three-sixty-posts wrap container">
-  <div class="wrap container" role="document">
-    <?php echo do_shortcode('[tsl_section_header header="TSL 360" subtitle="Our latest and greatest original posts." button-target="/360" button-text="view all"]'); ?>
-  </div><!-- /.wrap -->
-  <div class="posts">
-    <?php echo do_shortcode('[tsl_recent_posts type="threesixty" get="12" size="thirds"]'); ?>
-  </div>
-</section>
-<section class="dynamic-sidebar">
-      <?php dynamic_sidebar('sidebar-donate'); ?>
-</section>
